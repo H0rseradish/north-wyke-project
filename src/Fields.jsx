@@ -1,31 +1,20 @@
 
-import { useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { fieldsLoad } from './geojsonLoader.js'
-import { Const } from 'three/tsl';
+import { useGeojson } from './geojsonContext.js';
 
-export default function Fields(){
+export default function Fields() {
 
     const OFFSET_X = 265900;
     const OFFSET_Z = 98200;
 
-    const [ fieldData, setFieldData ] = useState([]);
+    const {geojsonData: fieldsData} = useGeojson()
 
-    useEffect(() => {
-        // on first render only:
-        fieldsLoad().then(setFieldData).catch(console.error);
-    }, [])
+    console.log(fieldsData)
+    // console.log(fieldsData[6].geometry.coordinates[0][0])
 
-    // console.log(fieldData)
-    // console.log(fieldData[6].geometry.coordinates[0][0])
+    const lowerWheatyCoords = fieldsData[6].geometry.coordinates[0][0];
 
-    useEffect(()  => {
-        if(fieldData.length > 25){
-            const lowerWheatyCoords = fieldData[6].geometry.coordinates[0][0]
-
-            console.log(lowerWheatyCoords)
-        }      
-    }, [fieldData]);
+    console.log(lowerWheatyCoords);
 
 
     const shape = new THREE.Shape();
@@ -35,17 +24,32 @@ export default function Fields(){
     shape.lineTo( 5, 0 );
     shape.lineTo( 0, 0 );
 
-    const extrudeSettings = {
-        steps: 3,
-        depth: 1,
-        bevelEnabled: true
-    }
+    const fieldShape = new THREE.Shape();
 
+    lowerWheatyCoords.forEach((coordinate, i) => {
+            if(i === 0) {
+                fieldShape.moveTo(coordinate[0] - OFFSET_X, coordinate[1] - OFFSET_Z);
+            } else { 
+                fieldShape.lineTo(coordinate[0] - OFFSET_X, coordinate[1] - OFFSET_Z);
+            }
+        })
+
+
+
+    const extrudeSettings = {
+            steps: 3,
+            depth: 1,
+            bevelEnabled: true 
+    }
+    
     return (
-        <mesh>
-            <extrudeGeometry args={ [ shape,  extrudeSettings ] } />
-            <meshBasicMaterial color='red' wireframe />
+       <>
+        <mesh scale= {0.05}>
+            <extrudeGeometry args={ [ fieldShape,  extrudeSettings ] } />
+            <meshBasicMaterial color='green' />
         </mesh>
+        </>
     )
 
 }
+

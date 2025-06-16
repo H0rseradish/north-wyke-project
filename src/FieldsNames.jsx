@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { fieldsLoad } from './geojsonLoader.js'
+import { geojsonLoad } from './utils/geojsonLoader.js'
 
 export default function FieldsNames() {  
     //create an array of fields, with state:
@@ -8,18 +8,18 @@ export default function FieldsNames() {
 
     useEffect(() => {
         // on first render only:
-        fieldsLoad().then(setFieldData).catch(console.error);
+        geojsonLoad().then(setFieldData).catch(console.error);
     }, [])
 
   
-    useEffect(()  => {
-        if(fieldData.length > 25){
-            console.log(fieldData[6].properties)
-            console.log(fieldData[6].geometry)
-            console.log(fieldData[6].geometry.coordinates)
-            console.log(fieldData[6].geometry.coordinates[0][0])
-        }      
-    }, [fieldData]);
+    // useEffect(()  => {
+    //     if(fieldData.length > 25){
+    //         console.log(fieldData[6].properties)
+    //         console.log(fieldData[6].geometry)
+    //         console.log(fieldData[6].geometry.coordinates)
+    //         console.log(fieldData[6].geometry.coordinates[0][0])
+    //     }      
+    // }, [fieldData]);
     //these don't work (and cause an error) until a hot reload has happened:
     
     // const lowerWheatyCoords = fieldData[6].geometry.coordinates[0][0];
