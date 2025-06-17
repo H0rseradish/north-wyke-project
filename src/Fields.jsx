@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { useGeojson } from './geojsonContext.js';
 
 export default function Fields() {
-
+    // because the coordinates are huuuuge:
     const OFFSET_X = 265900;
     const OFFSET_Z = 98200;
 
@@ -16,7 +16,7 @@ export default function Fields() {
 
     console.log(lowerWheatyCoords);
 
-
+    // test shape:
     const shape = new THREE.Shape();
     shape.moveTo( 0, 0 );
     shape.lineTo( 0, 3 );
@@ -27,13 +27,14 @@ export default function Fields() {
     const fieldShape = new THREE.Shape();
 
     lowerWheatyCoords.forEach((coordinate, i) => {
+            //start point:
             if(i === 0) {
                 fieldShape.moveTo(coordinate[0] - OFFSET_X, coordinate[1] - OFFSET_Z);
             } else { 
+                // then draw the shape:
                 fieldShape.lineTo(coordinate[0] - OFFSET_X, coordinate[1] - OFFSET_Z);
             }
         })
-
 
 
     const extrudeSettings = {

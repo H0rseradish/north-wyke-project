@@ -83,7 +83,7 @@ export default function PetesApp() {
       <button onClick={handleClick}>2014</button>
       <button onClick={handleClick1}>2015</button>
       <button onClick={handleClick2}>2016</button>
-      {/* - set a fields property on Map that be the current STATE of fields:- based on which/whether button was clicked, with its setter function determinig the values*/}
+      {/* - set a fields property on Map that will be the current STATE of fields:- based on which/whether button was clicked, with its setter function determinig the values*/}
       <Map fields={fieldsState} />
     </div>
   );

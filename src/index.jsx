@@ -6,9 +6,9 @@ import { GeojsonProvider } from './geojsonProvider';
 
 
 import PetesApp from './PetesApp';
-
-import Fields from './Fields';
 import FieldsNames from './FieldsNames';
+import Experience from './Experience';
+import Timeline from './Timeline';
 
 
 const root = createRoot(document.querySelector('#root'));
@@ -18,12 +18,12 @@ root.render(
         <GeojsonProvider>
 
             <Canvas>
-                <Fields />
-                
+                <Experience />
             </Canvas>
+
+            <Timeline />
             <FieldsNames />
             <PetesApp />
-
         </GeojsonProvider>
     </StrictMode>
 )

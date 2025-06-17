@@ -1,11 +1,11 @@
-import Timeline from "./Timeline";
-import TextExplanation from "./TextExplanation";
-import Map3d from "./Map3d";
+import MakeField from "./MakeField";
+
 
 export default function Experience() {
     return (
         <>
-            <Timeline />
+            <MakeField field={ 6 } />
+            <MakeField field={ 4 } />
         </>
     )
 }
