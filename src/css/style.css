@@ -41,11 +41,13 @@ datalist {
   /* writing-mode: vertical-lr; */
   width: 90vw;
   margin-left: 5vw;
+  cursor: pointer;
 }
 
 input[type="range"] {
   width: 90vw;
   margin-left: 5vw;
+  cursor: pointer;
 }
 
 /* a:hover {

@@ -1,6 +1,6 @@
 //understanding Pete's code:
 import { useState } from "react";
-import "./style.css";
+import "./css/style.css";
 
 // storing the system types in an object:
 const systemTypes = {
@@ -37,7 +37,7 @@ function Field({ fieldType }) {
   );        
 }
 
-//function that returns the rendered fields using .map() to..loop through the fields (originally the array of objects in initial?Fields, and subsequently whatever the state happens to be - I think.)
+//function that returns the rendered fields using .map() to..loop through the fields (originally the array of objects in initial?Fields, and subsequently whatever the state happens to be - I think...?)
 function Map({ fields }) {
 
   return fields.map((_, i) => (

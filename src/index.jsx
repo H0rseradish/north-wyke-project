@@ -1,14 +1,12 @@
-import './style.css';
+import './css/style.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Canvas } from '@react-three/fiber';
-import { GeojsonProvider } from './geojsonProvider';
+
+import { GeojsonProvider } from './utils/geojsonProvider';
 
 
 import PetesApp from './PetesApp';
-import FieldsNames from './FieldsNames';
-import Experience from './Experience';
-import Timeline from './Timeline';
+import App from './App';
 
 
 const root = createRoot(document.querySelector('#root'));
@@ -16,13 +14,7 @@ const root = createRoot(document.querySelector('#root'));
 root.render(
     <StrictMode>
         <GeojsonProvider>
-
-            <Canvas>
-                <Experience />
-            </Canvas>
-
-            <Timeline />
-            <FieldsNames />
+            <App />
             <PetesApp />
         </GeojsonProvider>
     </StrictMode>

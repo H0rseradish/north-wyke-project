@@ -1,9 +1,8 @@
 
 import * as THREE from 'three';
-import { useGeojson } from './geojsonContext.js';
+import { useGeojson } from './utils/geojsonContext.js';
 
-
-//now -- try using props here... to make the selected field. But do I use index, or should I use the OBJECTID from the geojson - is that even doable? Try index first.
+//now -- try using props here... to make the selected field. But do I use index, or should I use the OBJECTID from the geojson - is that even doable? YES NEED TO DO THAT but leave it as index for now.
 
 export default function MakeField({ field }) {
     // console.log(props)
@@ -46,7 +45,7 @@ export default function MakeField({ field }) {
     }
     // putting the scale on here is much better than messing with extreme values on the camera - which is what I was doing in the vanilla app:
     return (
-            <mesh scale= { 0.01 }>
+            <mesh scale= { 0.005 }>
                 <extrudeGeometry args={ [ fieldShape,  extrudeSettings ] } />
                 <meshBasicMaterial color='green' />
             </mesh>
