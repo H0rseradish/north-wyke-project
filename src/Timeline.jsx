@@ -1,9 +1,7 @@
 import { useRef } from "react";
-//get the make Field into here to make all the functions
-import MakeField from './MakeField.jsx'
 
 export default function Timeline({currentYear, onYearChange }) {
-
+    //so I can manipulate the element:
     const input = useRef()
 
     // handle changes to the range input:
@@ -11,21 +9,31 @@ export default function Timeline({currentYear, onYearChange }) {
         onYearChange(Number(e.target.value))
     }
 
-    // handle clicks on the dates
+    // handle clicks on the dates. can it be done with only one function for these events???
     const handleClick = (e) => {
         // console.log(e.target.value);
         input.current.value = e.target.value
         //aha!!
         onYearChange(Number(input.current.value))
     }
-    // state has to be lifted, so this needs to be elsewhere:
-    // const [ currentYear, setCurrentYear ] = useState('2008')
 
-    //would need to fetch this array from a json config?
-    // const timelineValues = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+    // Need to import/fetch? this array from a json config - for the app reusability goal.
+    const timelineValues = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
-    // //ohmigod this works: so now I need to pass current year to somewhere where something happens.
-    // console.log(currentYear)
+    // This is better! Except for using the index as a key? But the idea of fixed order is intrinsic to any timeline so surely this is ok in this case? (Wait, or is it that things don't necessarily get computed in array order????)
+    //Another thing, because of this loop I think I have to make sure that other things, when part of this function, are only rendered once using useEffect with empty array as second param????
+    const timelineOptions = timelineValues.map((option, index) => 
+        <option 
+            key={ index } 
+            value={ option } 
+            label={ option } 
+            onClick={ handleClick } 
+        />
+    )
+    
+    // These could be neater as variables to give to input?
+    // console.log(timelineValues[0]);
+    // console.log(timelineValues[timelineValues.length - 1]);
 
     return (
         <form 
@@ -40,31 +48,17 @@ export default function Timeline({currentYear, onYearChange }) {
                 ref={ input }
                 type="range" 
                 id="range"
-                min="2008"
-                max="2018"
+                min={ timelineValues[0] }
+                max={ timelineValues[timelineValues.length - 1] }
                 value={ currentYear }
-                //put the fields ito here
-                onChange={handleChange}
+                onChange={ handleChange }
             />
             {/* make this invisible in css. I think it needs to exist though? */}
-            <label htmlFor="range">{currentYear}</label>
+            {/* <label htmlFor="range">{currentYear}</label> */}
 
             <datalist>
-            {/* need to loop through an array of values to make these from config file for reusability? Should just be made in a loop anyway because this is terrible */}
-                <option value='2008' label='2008' onClick={ handleClick } />
-                <option value='2009' label='2009' onClick={ handleClick } />
-                <option value='2010' label='2010' onClick={ handleClick } />
-                <option value='2011' label='2011' onClick={ handleClick } />
-                <option value='2012' label='2012' onClick={ handleClick } />
-                <option value='2013' label='2013' onClick={ handleClick } />
-                <option value='2014' label='2014' onClick={ handleClick } />
-                <option value='2015' label='2015' onClick={ handleClick } />
-                <option value='2016' label='2016' onClick={ handleClick } />
-                <option value='2017' label='2017' onClick={ handleClick } />
-                <option value='2018' label='2018' onClick={ handleClick } />
+                { timelineOptions }
             </datalist>
         </form>
     )
 }
-
-// Will need  a whole bunch of functions to define what happens each year - IN THE EXPERIENCE FILE!!

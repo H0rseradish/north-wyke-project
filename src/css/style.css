@@ -30,6 +30,7 @@ body,
   height: 100%;
   /* prevent scroll: */
   overflow: hidden;
+  background: black;
 }
 
 datalist {
@@ -40,6 +41,7 @@ datalist {
   /* text-align: center; */
   /* writing-mode: vertical-lr; */
   width: 90vw;
+  color: white;
   margin-left: 5vw;
   cursor: pointer;
 }

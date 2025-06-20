@@ -1,17 +1,19 @@
-
 import * as THREE from 'three';
 import { useGeojson } from './utils/geojsonContext.js';
+import { Html } from '@react-three/drei';
 
-//now -- try using props here... to make the selected field. But do I use index, or should I use the OBJECTID from the geojson - is that even doable? YES NEED TO DO THAT but leave it as index for now.
+//now -- try using props here... to make the selected field. But do I use index, or should I use the OBJECTID from the geojson - is that even doable? YES NEED TO DO THAT but leave it as index for now. 
+// There will be a lot more props because of changing colours etc?
 
-export default function MakeField({ field }) {
+export default function MakeField( {field, fieldName, color} ) {
     // console.log(props)
     // console.log(props.field)
-    console.log(field)
+    // console.log(field)
 
-    // because the coordinates are huuuuge:
+    // because utm coordinates are huuuuge:
     const OFFSET_X = 265900;
     const OFFSET_Z = 98200;
+
 
     // the useContext hook in action!!!!:
     const {geojsonData: fieldsData} = useGeojson();
@@ -45,9 +47,11 @@ export default function MakeField({ field }) {
     }
     // putting the scale on here is much better than messing with extreme values on the camera - which is what I was doing in the vanilla app:
     return (
-            <mesh scale= { 0.005 }>
+            <mesh scale= { 0.008 } position={[-1, 0, -1]} rotation={ [Math.PI * - 0.5, 0, Math.PI * 0.2] }>
                 <extrudeGeometry args={ [ fieldShape,  extrudeSettings ] } />
-                <meshBasicMaterial color='green' />
+                <meshBasicMaterial color={ color } />
+                {/* sort the labels out later: */}
+                {/* <Html>{ fieldName }</Html> */}
             </mesh>
     )
 }

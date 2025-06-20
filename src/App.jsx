@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from "@react-three/drei";
 import Experience from './Experience';
 import Timeline from './Timeline';
 
@@ -10,7 +11,10 @@ export default function App() {
 
     return (
         <>
-            <Canvas>
+            <Canvas
+                camera={{ position: [0, 3, 6] }}
+            >
+                <OrbitControls />
                 {/* so experience knows what year has been set */}
                 <Experience currentYear={currentYear} />
             </Canvas>
