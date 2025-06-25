@@ -31,62 +31,30 @@ const fieldsByYear = {
     2025: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ] 
 } 
 
-    // this seems crappy but will have to do for now! Instead of the stuuf above?
-const colorGroupsByYear = {
-    2008: {
-        gray: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21]
-    },
-    2009: {
-        gray: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21]
-    },
-    //whole thing green now:
-    2010: {
-        green: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21]
-    },
-    2011: {
-        green: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21]
-    },
-    2012: {
-        green: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21]
-    },
-    // 3 colours for differing fields:  new boundary for 16     
-    2013: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-    2014: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-    // orchard Dean split 24 & 25
-    2015: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 24, 25],
-    2016: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 24, 25],
-    2017: [ 0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2018: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    // red system, 7 & 18 join to become Pecketsford Whole (no shape provided) 
-    2019: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2020: [ 0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2021: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2022: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2023: [ 0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2024: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
-    2025: [ 0, 1, 2, 3, 5, 6, 7, 8, 9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ] 
-
-
-
-}
+// wait can i make the geojson into an array of objects that has additional information?
+// As in - extract the relevant, discard the irrelevant, and add somthing of my own? making it into new jsopn??? then would only need to filter or map to control what is shown....
 
 // function getYearColors(currentYear) {
  // so what to do?
 // }
 
-
+// function BlueFields(fieldsData) {
+//         const blueFields = fieldsData.filter((field) => 
+//             field.properties.Farmlet === "Blue")
+//         console.log(blueFields) 
+//         return blueFields
+//     }
 
 
 //But these functions would be very specific to this site. Are they? For the goal of app reusability much thinking required here.
 function yearFieldsDisplay(fieldsData, currentYear){
+
     // console.log(fieldsData[0].properties)
     console.log(currentYear)
     // console.log(fieldsByYear[currentYear])
     const fieldsToDisplay = fieldsByYear[currentYear]
     //ok this is undefined
     console.log(fieldsToDisplay)
-
-    
 
     return fieldsToDisplay.map((field) => (
         <MakeField 

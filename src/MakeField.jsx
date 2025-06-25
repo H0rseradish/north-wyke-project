@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import { useGeojson } from './utils/geojsonContext.js';
 import { Html } from '@react-three/drei';
 
 //now -- try using props here... to make the selected field. But do I use index, or should I use the OBJECTID from the geojson - is that even doable? YES NEED TO DO THAT but leave it as index for now. 
@@ -10,22 +9,21 @@ export default function MakeField( {field, fieldName, color} ) {
     // console.log(props.field)
     // console.log(field)
 
-    // because utm coordinates are huuuuge:
+    // because utm coordinates are huuuuge:    
     const OFFSET_X = 265900;
     const OFFSET_Z = 98200;
 
 
-    // the useContext hook in action!!!!:
-    const {geojsonData: fieldsData} = useGeojson();
+    // the useContext hook in action!!!!: But dont need it now because the data is coming from Experiment
+    // const {geojsonData: fieldsData} = useGeojson();
 
     // console.log(fieldsData);
     // console.log(fieldsData[6].geometry.coordinates[0][0])
 
-    //should this code below below be in a function for any reason? or is that unnecessary complexity??
+    //So the field is just coming in with its data now:
+    const fieldCoords = field.geometry.coordinates[0][0];
 
-    const fieldCoords = fieldsData[field].geometry.coordinates[0][0];
-
-    // console.log(fieldCoords);
+    console.log(field);
 
     const fieldShape = new THREE.Shape();
     
