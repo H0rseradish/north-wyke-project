@@ -23,8 +23,6 @@ export default function MakeField( {field, fieldName, color} ) {
     //So the field is just coming in with its data now:
     const fieldCoords = field.geometry.coordinates[0][0];
 
-    console.log(field);
-
     const fieldShape = new THREE.Shape();
     
     fieldCoords.forEach((coordinate, i) => {
