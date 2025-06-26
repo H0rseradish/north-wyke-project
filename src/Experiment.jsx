@@ -41,16 +41,17 @@ function yearFieldsDisplay(fieldsData, currentYear){
     const greenFields = fieldsData.filter((field) => field.properties.Farmlet === "Green")
     // console.log(redFields)
 
-     //should be done on ID not index? The way I am assigning colours wont work here
+    //should be done on ID not index
+    // Also the way I am assigning colours wont work here either
     const allFieldsTo2013 = [
        ...fieldsData.slice(0, 16),
        ...fieldsData.slice(17, 22), 
     ]
-    //ditto
-    const orchardDeanSplit2015 = [
-        // 24:Orchard Dean North, 25:Orchard Dean South
-        ...fieldsData.slice(24),
-    ];
+    //should be done on ID not index- Its causing a Key Error! 
+    // const orchardDeanSplit2015 = [
+    //     // 24:Orchard Dean North, 25:Orchard Dean South
+    //     ...fieldsData.slice(24),
+    // ];
 
     // but what about the colours?
     // - they don't depend upon year (except sometimes they do... ie baseline)
@@ -77,7 +78,7 @@ function yearFieldsDisplay(fieldsData, currentYear){
             system: [redFields, greenFields, blueFields]
         },
         2015: {
-            system: [redFields, greenFields, blueFields, orchardDeanSplit2015]
+            system: [redFields, greenFields, blueFields]
         }
     }
 
