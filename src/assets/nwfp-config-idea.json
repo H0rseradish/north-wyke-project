@@ -1,0 +1,46 @@
+{
+  "geojson": "path/to/geojson.geojson",
+  "title": "NWFP",
+  "metadata": {
+    "fields": [
+      {
+        "id": 1,
+        "name": "big field",
+        "colour": "green"
+      },
+      {
+        "id": 2,
+        "name": "small field",
+        "colour": "green"
+      },
+      {
+        "id": 3,
+        "name": "average field",
+        "colour": "red"
+      }
+    ]
+  },
+  "story": [
+    {
+      "name": "The beginning",
+      "description": "Welcome to NWFP, yada yada",
+      "timestamp": 1219752922,
+      "timestampHumanReadable": "August 26th 2008",
+      "fields": [1, 2, 3, 4, 5]
+    },
+    {
+      "name": "Something happened",
+      "description": "A new field appears, shock",
+      "timestamp": 1237641322,
+      "timestampHumanReadable": "March 21st 2009",
+      "fields": [1, 2, 3, 4, 5, 6]
+    },
+    {
+      "name": "Badger Survey",
+      "description": "They found some",
+      "timestamp": 1238675332,
+      "timestampHumanReadable": "April 2nd 2009",
+      "model": "path/to/model.gltf"
+    }
+  ]
+}
