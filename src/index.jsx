@@ -2,7 +2,7 @@ import './css/style.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { GeojsonProvider } from './utils/geojsonProvider';
+// import { GeojsonProvider } from './utils/geojsonProvider';
 import { JsonProvider } from './utils/jsonProvider';
 
 // import PetesApp from './PetesApp';

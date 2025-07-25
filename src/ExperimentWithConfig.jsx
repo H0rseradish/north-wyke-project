@@ -1,4 +1,3 @@
-
 // importing my 'reusable' things:
 import { useAllAppData } from "./utils/jsonContext";
 import MakeField from "./MakeField";
@@ -33,7 +32,7 @@ function assignColor(farmletSystem){
 //now try to get the data out of appConfig not the geojson...
 //am I going to change this to days?
 
-function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
+function yearFieldsDisplay(fieldsData, currentYear, appConfig){
 
     // console.log(appConfig)
     // in the json all the time except this is no good because the filtering is not enough to get the correct fields:
@@ -46,8 +45,12 @@ function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
     const greenFields = fieldsData.filter((field) => field.properties.Farmlet === "Green")
     
     // try this:
-    //will need to filter the field data geojson on the basis of the json config fields??? so is filter the wrong way - need map too?
-    const configGreenFields = fieldsData.filter((field) => field.farmlet === "Green")
+    //will need to filter the field data geojson on the basis of the json config fields??? - need map too? 
+    // THINK ABOUT THIS LATER!!!
+    if (!appConfig) return <p>Loading app config...</p>
+
+    const configGreenFields = appConfig.fields.filter((field) => field.farmlet === "Green")
+    // console.log(configGreenFields)
     
 
     //should be done on ID not index
@@ -87,7 +90,7 @@ function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
             system: [redFields, greenFields, blueFields]
         },
         2015: {
-            system: [redFields, blueFields, configGreenFields]
+            system: [redFields, blueFields, greenFields]
         }
     }
 

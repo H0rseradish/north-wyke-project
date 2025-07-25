@@ -3,7 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from "@react-three/drei";
 // import Experience from './Experience';
 import Timeline from './Timeline';
-import TimelineUnix from './TimelineUnix';
+import TimelineSlider from './TimelineSlider';
+import TimelineNav from './TimelineNav';
 // import Experiment from "./Experiment";
 // just checking things are there:
 // import { jsonLoad } from './utils/jsonLoader';
@@ -12,7 +13,7 @@ import ExperimentWithConfig from './ExperimentWithConfig';
 
 //I suppose all the time periods ought to be user controlled via config for a reusable app?
 
-// 1st August 2008 as start date - hardcoded for now but should get it out of the config...!
+// 1st August 2008 as start date - hardcoded in useState for now but should get it out of the config...!
 
 const startDay = 1217545200;
 // Date.now is in ms, so:
@@ -38,17 +39,21 @@ export default function App() {
 
                 <ExperimentWithConfig currentYear={currentYear} currentDay={ currentDay}/>
             </Canvas>
-            {/* so Timeline knows the year and can set the year */}
-            <Timeline currentYear={currentYear} onYearChange={setCurrentYear}/> 
+
+            <Timeline 
+                currentYear={currentYear} onYearChange={setCurrentYear}/>
 
             {/* new timeline based on days */}
-            <TimelineUnix 
+            <TimelineSlider 
                 currentDay={currentDay} 
                 onDayChange={setCurrentDay}
                 startDay={startDay}
-                // startYear={startYear}
                 endDay={endDay}
-                /> 
+            /> 
+            {/* and a navigation with clickable years*/}
+            {/* <TimelineNav 
+                currentYear={currentYear} onYearChange={setCurrentYear}
+            /> */}
         </>
     )
 }
