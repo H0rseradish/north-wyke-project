@@ -23,7 +23,7 @@ export async function jsonLoad() {
     if (!geoResponse.ok) throw new Error('Failed to load the geojson via the config file')
     const geojson = await geoResponse.json();
     //this works:
-    console.log(geojson.features);
+    // console.log(geojson.features);
     const geojsonData = geojson.features
 
     return { appConfig, geojsonData } 

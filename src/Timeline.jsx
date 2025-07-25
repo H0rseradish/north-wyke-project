@@ -39,7 +39,7 @@ export default function Timeline({currentYear, onYearChange }) {
         <form 
             style={ { 
             position: 'absolute',  
-            bottom: 20, 
+            bottom: 50, 
             width: '100%', 
             textAlign: 'center'
             } }

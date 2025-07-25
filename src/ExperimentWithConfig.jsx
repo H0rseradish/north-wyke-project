@@ -5,6 +5,7 @@ import MakeField from "./MakeField";
 
 //Now - to experiment with using appConfig...
 
+// the whole thing needs rethinking 
 
 
 
@@ -30,10 +31,11 @@ function assignColor(farmletSystem){
 }
 
 //now try to get the data out of appConfig not the geojson...
+//am I going to change this to days?
 
 function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
 
-    console.log(appConfig)
+    // console.log(appConfig)
     // in the json all the time except this is no good because the filtering is not enough to get the correct fields:
     const blueFields = fieldsData.filter((field) => field.properties.Farmlet === "Blue")
     // console.log(blueFields)
@@ -43,8 +45,9 @@ function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
 
     const greenFields = fieldsData.filter((field) => field.properties.Farmlet === "Green")
     
-    //try this:
-    const configGreenFields = appConfig.fields.filter((field) => console.log(field))
+    // try this:
+    //will need to filter the field data geojson on the basis of the json config fields??? so is filter the wrong way - need map too?
+    const configGreenFields = fieldsData.filter((field) => field.farmlet === "Green")
     
 
     //should be done on ID not index
@@ -104,7 +107,7 @@ function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
     if (!fieldsByYear[currentYear]) return [];
 
     const fieldsToDisplay = fieldsToDisplayArrays.system.flat()
-    console.log(fieldsToDisplay)
+    // console.log(fieldsToDisplay)
     
 
     return fieldsToDisplay.map((field) => ( 
@@ -112,7 +115,7 @@ function yearFieldsDisplay(fieldsData, currentYear, appConfig ){
         <MakeField 
             key={ field.properties.OBJECTID } 
             field={ field } 
-            fieldName={ field.properties.Field_Name }
+            fieldName={ field.properties.name }
             // color={ 'blue' }
             // will this need to actually be a a prop passed to assignColor??? - because it won't always be dependent on farmlet.
             color={ assignColor(field.properties.Farmlet) }
@@ -126,11 +129,11 @@ export default function ExperimentWithConfig({currentYear}) {
     // useContext in action: the data is here!! not needed in Makefield
     const { geojsonData: fieldsData, appConfig } = useAllAppData();
 
-    // ok, its here:
-    console.log(appConfig)
-
-    //just in case:
+    //just in case - this is a version of a condition checking if the data is there - and making sure react holds off until the data is there:
     if(!fieldsData || fieldsData.length === 0) return null;
+    //this does the same thing:
+    if (!appConfig) 
+        return <p>Loading app config...</p>
 
     // the yearFields function decides what to display based on current year
     const yearFields = yearFieldsDisplay(fieldsData, currentYear, appConfig)
