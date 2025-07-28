@@ -2,7 +2,6 @@ import { useRef } from "react";
 // import { useState } from 'react';
 import { useAllAppData } from "./utils/jsonContext";
 
-
 export default function TimelineSlider({ currentDay, onDayChange, startDay, endDay }) {
     //so I can manipulate the html element: hooks MUST go here, before any conditions!!! otherwise violates Rules of Hooks... (not safe - gets skipped on some renders)
     const input = useRef()
@@ -31,30 +30,24 @@ export default function TimelineSlider({ currentDay, onDayChange, startDay, endD
         onDayChange(Number(e.target.value))
     }
 
-    // handle clicks on the timeline labels - the years are the most granular if they are permanently visible?. Will need multiple handlers to handle each kind of event
+    // handle clicks on the timeline (display the date clicked on? labels) -
     const handleClick = (e) => {
         console.log(e.target.value);
-        input.current.value = e.target.value
-        //aha!!
-        onDayChange(Number(input.current.value))
     }
-    
 
-    //clicking on the year labels:
-    // fixed order is intrinsic to any timeline so index as key is ok in this case? 
-    //Another thing, because of this loop I think I have to make sure that other things, when part of this function, are only rendered once using useEffect with empty array as second param? or useMemo? 
-    
-    //OK -  after many false starts just realised the year things will need to be a separate thing!!!  - Component! YearLine? TimelineNav
-    // const labels = timelineLabels.map((option, index) => 
-    //     <option 
-    //         key={ index } 
-    //         value={ option } 
-    //         label={ option } 
-    //         onClick={ handleClick } 
-    //     />
-    // )
+    // all the story objects that have a start date
+    const unixTimelineValues = story.filter(item => item.timestamps.start.unix !== null)
+    console.log(unixTimelineValues)
 
-    // ?? const humanReadableSelection = 
+    const storyEventStarts = unixTimelineValues.map((i) => i.timestamps.start.unix )
+    console.log(storyEventStarts)
+    // now - how to map these to a value that goes from 0 - 1? 
+
+
+    //(also Date() is legacy now(!), according to mdn - except that Temporal is only supported in firefox Ha! according to caniuse)
+    const currentUnix = new Date().getSeconds()
+    console.log(currentUnix)
+
      
     return (
         <div>
@@ -77,6 +70,7 @@ export default function TimelineSlider({ currentDay, onDayChange, startDay, endD
                     onChange={ handleChange }
                     onClick={ handleClick}
                     //24 hr steps:
+                    //somehow the tickmarks/steps need to be values from looping (mapping?) the array of the start timestamps in the json:
                     step={86400} 
                 />
 
