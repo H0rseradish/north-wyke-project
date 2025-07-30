@@ -1,9 +1,10 @@
+import { useMemo } from 'react';
 import { useAllAppData } from "./jsonContext";
 
 // what is the most convenient solution for passing this data around?
    
 export default function useDerivedAppConstants() {
-    console.log('configUtils here')
+    // console.log('configUtils here')
 
     const { appConfig }= useAllAppData();
     if (!appConfig) 
@@ -23,15 +24,19 @@ export default function useDerivedAppConstants() {
     const endDay = Math.floor(Date.now() / 1000)
     // would it be better to have the end of the last day of the current year?
 
+    // need to push the current Date on to here!!
     const unixStarts = allStoryEvents.map((item) => item.timestamps.start.unix)
     // console.log(unixStarts)
+    //add current date to the array - for the timeline...:
+    unixStarts.push(endDay)
 
-    const normalisedStarts = unixStarts.map((unix) => {
-        const x = unix - startDay;
+    const normalisedStarts = unixStarts.map((unixStart) => {
+        const x = unixStart - startDay;
         const normalised = x / (endDay - startDay);
         return normalised
     })
-    console.log(normalisedStarts)
+    // console.log(normalisedStarts)
+
 
     const startYear = new Date(allStoryEvents[0].timestamps.start.unix * 1000).getFullYear()
     // console.log(startYear)
