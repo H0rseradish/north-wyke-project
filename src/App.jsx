@@ -5,16 +5,17 @@ import { OrbitControls } from "@react-three/drei";
 import TimelineSlider from './TimelineSlider';
 import TimelineNav from './TimelineNav';
 
-//and now - is this going to work....NOT YET..YESSSS!!!
+// much work still to do on this:
 import ExperimentWithConfig from './ExperimentWithConfig';
 import useDerivedAppConstants from './utils/configUtils';
+
 //I suppose all the time periods ought to be user controlled via config for a reusable app? Yes - done!!
 
 // this component is for holding the state so it can be passed around - ie shared, to both the 3d rendering component (Experience) and the Timelime (which is outside of the canvas, because it is not a r3f thing).
 export default function App() {
-
-    //wrap this in useMemo() - NO because its a custom hook
-    const { allStoryEvents, startDay, endDay, startYear, endYear, normalisedStarts } = useDerivedAppConstants();
+    
+    //wrap this in useMemo() - NO because its a custom hook. (the variables are wrapped in useMemo in the configUtils file, (after much tribulation)
+    const { allStoryEvents, startDay, endDay, startYear, endYear, normalisedStarts, unixStarts } = useDerivedAppConstants();
     
     //for the new timeline using unix seconds:
     const [currentDay, setCurrentDay] = useState(null)
@@ -25,9 +26,10 @@ export default function App() {
     // Sorted!:
     useEffect(() => {
         if (startDay) {
-            setCurrentDay(startDay)
+            // Is this really stupid to have this condition ?:
+            setCurrentDay(0)
         }
-        //ok, startDay is unlikely to change, but it might? 
+        //... ok, startDay is unlikely to change, but it might? 
     }, [startDay]);
 
     useEffect(() => {
@@ -38,7 +40,7 @@ export default function App() {
 
     // still need this:
     if(!allStoryEvents) 
-        return('StoryEvents not here yet');
+        return('StoryEvents not here yet, which probably means nothing else is either');
     // console.log(allStoryEvents);
 
     return (
@@ -59,6 +61,7 @@ export default function App() {
                 startDay={startDay}
                 endDay={endDay}
                 normalisedStarts={normalisedStarts}
+                unixStarts={unixStarts}
             /> 
             {/* and a navigation with clickable years*/}
             <TimelineNav 
