@@ -4,7 +4,7 @@ import { OrbitControls } from "@react-three/drei";
 
 import TimelineSlider from './TimelineSlider';
 import TimelineNav from './TimelineNav';
-
+import TextExplanation from "./TextExplanation";
 // much work still to do on this:
 import ExperimentWithConfig from './ExperimentWithConfig';
 import useDerivedAppConstants from './utils/configUtils';
@@ -45,6 +45,8 @@ export default function App() {
 
     return (
         <>  
+            <TextExplanation 
+                currentDay={currentDay} />
             <Canvas
                 camera={{ position: [0, 3, 6] }}
             >
@@ -53,7 +55,7 @@ export default function App() {
                 <ExperimentWithConfig currentYear={currentYear} currentDay={ currentDay}/>
 
             </Canvas>
-
+            
             {/* new timeline based on days */}
             <TimelineSlider 
                 currentDay={currentDay} 

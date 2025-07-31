@@ -1,7 +1,6 @@
 import { useRef, useMemo } from "react";
-// import { useState } from 'react';
 
-export default function TimelineSlider({ currentDay, onDayChange, normalisedStarts, unixStarts }) {
+export default function TimelineSlider({ currentDay, onDayChange, normalisedStarts, unixStarts,  }) {
 
     // console.log(unixStarts.length)
     // console.log(normalisedStarts.length)
@@ -29,6 +28,9 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
     // }, [sliderCurrentNormalised, normalisedStarts]);
 
     //------------------------
+
+    //I tried to move this to configUtils but it didnt go well... so I had to move it back!
+
     // So this gets both the snapped Value and the index, so that I can treat them in relation to each other: 
     // I couldnt have worked this out in the time without consulting chat:
      const { snappedValue, snappedIndex} = useMemo(() => {
@@ -80,9 +82,7 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
     const handlePointerUp =(e) => {
         //needed? not entirely sure:
         // e.preventDefault()
-        // console.log(e.target.value);
-        //chat suggests:
-        // onDayChange(snappedUnixTimestamp)
+        // console.log(e.target);
         onDayChange(e.target.value)
     }
 
@@ -93,6 +93,7 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
     // but the tick marks are even... need to be proportional for UX.
     return (
         <div>
+            
             <form 
                 style={ { 
                 position: 'absolute',  
@@ -115,6 +116,7 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
                     // but... need to keep onChange, otherwise slider becomes read only! what to do? Without this function, even an empty function makes it read only. Thankfully the snapping seems to be preventing it from firing off 100s of changes:
                     onChange={handlePointerUp}
                 />
+                
                 <p style={{ margin: 0}}>Selected date: { humanReadable }</p>
                 <p style={{ margin: 0}}>Selected date: { snappedValue }</p>
                 <p style={{ margin: 0}}>Selected timestamp: { snappedUnixTimestamp }</p>

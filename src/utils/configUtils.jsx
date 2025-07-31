@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useAllAppData } from "./jsonContext";
 
 // what is the most convenient solution for passing this data around?
@@ -12,17 +12,14 @@ export default function useDerivedAppConstants() {
 
     // Omigod the solution is to put everything inside useMemo? WAIT is this actually working? YES!!!
     const appConstants = useMemo(() => {
-
+        //check that appConfig is not false (ie neither null nor undefined) before accessing .story - this is 'Optional Chaining'.
+        // the longer way would be: if(appConfig && !appConfig.story) etc:
         if (!appConfig?.story) return {loading: true} 
-        //when this is null or undefined the story data cannot be obtained but returning jsx is wrong? Because hooks are to 'encapsulate reusable logic and state' So it is not a PURE function.
-        // return <p> Loading data. This jsx is bad - but it works - will have to sort it out later</p>;
-        //solution - a 'status object'!!!
-        // return { loading: true}
-        // However, I still have the chicken and egg situation with useMemo.... see above
-        // console.log(appConfig)
 
+        //deconstruct story out of the appConfig:
         const { story } = appConfig;
 
+        // Filtering out anything that doesnt have a start
         const allStoryEvents = story.filter(item => item.timestamps.start.unix !== null)
         // console.log(allStoryEvents)
 
@@ -53,6 +50,7 @@ export default function useDerivedAppConstants() {
         // // the current year....
         const endYear = new Date().getFullYear()
         // console.log(endYear)
+        
 
         // returning the status object!!! (with all the other things)
         return { 

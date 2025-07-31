@@ -13,12 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
+
+    h1 {
+      color: black;
+    }
   }
-}
+} */
 
 html,
 body,
@@ -30,6 +34,15 @@ body,
   height: 100%;
   /* prevent scroll: */
   overflow: hidden;
+}
+
+.explanation {
+  position: absolute;
+  height: 100%;
+  padding-left: 2rem;
+  z-index: 1;
+  /* so can click on timeline etc: */
+  pointer-events: none;
 }
 
 datalist {
@@ -49,10 +62,3 @@ input[type="range"] {
   margin-left: 5vw;
   cursor: pointer;
 }
-
-/* a:hover {
-  color: #747bff;
-}
-button {
-  background-color: #f9f9f9;
-} */
