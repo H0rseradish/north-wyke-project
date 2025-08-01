@@ -1,7 +1,7 @@
 import { useRef, useMemo } from "react";
 // import TextExplanation from "./TextExplanation";
 
-export default function TimelineSlider({ currentDay, onDayChange, currentYear, onYearChange, setCurrentYear, normalisedStarts, unixStarts, setSnappedIndex }) {
+export default function TimelineSlider({ currentDay, onDayChange, currentYear, onYearChange, normalisedStarts, unixStarts, setSnappedIndex }) {
 
     // console.log(unixStarts.length)
     // console.log(normalisedStarts.length)
@@ -57,8 +57,8 @@ export default function TimelineSlider({ currentDay, onDayChange, currentYear, o
     const snappedUnixTimestamp = unixStarts[snappedIndex]; 
     console.log(snappedUnixTimestamp)
 
-    // does what it says...
-    const humanReadable = new Date(snappedUnixTimestamp * 1000).toLocaleDateString()
+    // does what it says...except that month comes first
+    // const humanReadable = new Date(snappedUnixTimestamp * 1000).toLocaleDateString()
 
     // now I need to make this the currentYear
     const year = new Date(snappedUnixTimestamp * 1000).getFullYear()
@@ -74,10 +74,9 @@ export default function TimelineSlider({ currentDay, onDayChange, currentYear, o
 
     // handle changes to the range input:
     const handlePointerUp =(e) => {
-        //needed? not entirely sure:
-        // e.preventDefault()
         // console.log(e.target);
         onDayChange(e.target.value)
+        onYearChange(year)
     }
 
     //  const handleOnChange = () => {
@@ -95,7 +94,7 @@ export default function TimelineSlider({ currentDay, onDayChange, currentYear, o
             <form 
                 style={ { 
                 position: 'absolute',  
-                bottom: 40, 
+                bottom: 0, 
                 width: '100%', 
                 textAlign: 'center'
                 } }
@@ -116,8 +115,8 @@ export default function TimelineSlider({ currentDay, onDayChange, currentYear, o
                 />
                 
                 <div className="input-results">
-                    <p style={{ margin: 0}}>Selected date: { humanReadable }</p>
-                    <p style={{ margin: 0}}>Selected date: { snappedValue }</p>
+                    <p style={{ margin: 0}}>Selected year: { year }</p>
+                    <p style={{ margin: 0}}>Selected date as snapped Value: { snappedValue }</p>
                     <p style={{ margin: 0}}>Selected timestamp: { snappedUnixTimestamp }</p>
                     <p style={{ margin: 0, paddingBottom: '26px'}}>Selected event index number: { snappedIndex }</p>
                 </div>

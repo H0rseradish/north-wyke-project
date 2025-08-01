@@ -91,7 +91,38 @@ function yearFieldsDisplay(fieldsData, currentYear, appConfig){
         },
         2015: {
             system: [redFields, blueFields, greenFields]
-        }
+        },
+        2016: {
+            system: [greenFields, blueFields]
+        },
+        2017: {
+            system: [redFields, greenFields]
+        },
+        2018: {
+            system: [redFields, greenFields, blueFields]
+        },
+        2019: {
+            system: [redFields, greenFields, blueFields]
+        },
+        2020: {
+            system: [redFields, greenFields, blueFields]
+        },
+        2021: {
+            system: [blueFields]
+        },
+        2022: {
+            system: [greenFields, blueFields]
+        },
+        2023: {
+            system: [redFields, greenFields]
+        },
+        2024: {
+            system: [redFields, greenFields, blueFields]
+        },
+        2025: {
+            system: [redFields, greenFields, blueFields]
+        },
+
     }
 
     // a new array - with length of 7

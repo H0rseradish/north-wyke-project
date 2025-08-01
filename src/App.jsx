@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from "@react-three/drei";
 
+import useDerivedAppConstants from './utils/configUtils';
+
 import TimelineSlider from './TimelineSlider';
-import TimelineNav from './TimelineNav';
 import TextExplanation from "./TextExplanation";
 // much work still to do on this:
 import ExperimentWithConfig from './ExperimentWithConfig';
-import useDerivedAppConstants from './utils/configUtils';
+
 
 //I suppose all the time periods ought to be user controlled via config for a reusable app? Yes - done!!
 
@@ -77,12 +78,6 @@ export default function App() {
                 setSnappedIndex={setSnappedIndex}
                 
             /> 
-            {/* and a navigation with clickable years*/}
-            <TimelineNav 
-                startYear={startYear}
-                endYear={endYear}
-                currentYear={currentYear} onYearChange={setCurrentYear}
-            />
         </>
     )
 }
