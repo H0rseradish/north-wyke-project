@@ -1,0 +1,5 @@
+{
+    "appConfigPath": "./config-tryout.json",
+    
+    "comments": "I suppose something like this file would be needed in a reusable app to reference a function to get the relevant user config. There would need to be a placeholder config too."
+}
