@@ -1,10 +1,12 @@
 import { useRef, useMemo } from "react";
+// import TextExplanation from "./TextExplanation";
 
-export default function TimelineSlider({ currentDay, onDayChange, normalisedStarts, unixStarts,  }) {
+export default function TimelineSlider({ currentDay, onDayChange, currentYear, onYearChange, setCurrentYear, normalisedStarts, unixStarts, setSnappedIndex }) {
 
     // console.log(unixStarts.length)
     // console.log(normalisedStarts.length)
-    
+    console.log(currentYear)
+
     // so I can manipulate the html element: hooks MUST go here, before any conditions!!! otherwise violates Rules of Hooks... (not safe - gets skipped on some renders)
     const input = useRef()
 
@@ -14,20 +16,6 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
     const sliderCurrentNormalised = currentDay / 1000
     console.log(sliderCurrentNormalised)
     
-    // Find closest value in array - this does it - sadly I had to ask chatgpt for the calculation. 
-    // Math.abs() means it works in both directions!!!
-    // Shouldnt this be moved to my Utils? Yes but not at the moment
-    // This now obsolete bcause function below does the same thing, plus gets the index
-    // const snappedValue = useMemo(() => {
-    //     return normalisedStarts.reduce((previous, current) =>
-    //         //
-    //         Math.abs(current - sliderCurrentNormalised) < Math.abs(previous - sliderCurrentNormalised) 
-    //         ? current 
-    //         : previous
-    //     );
-    // }, [sliderCurrentNormalised, normalisedStarts]);
-
-    //------------------------
 
     //I tried to move this to configUtils but it didnt go well... so I had to move it back!
 
@@ -56,10 +44,12 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
                 closestIndex = i;
             }
         }
+        //pass the index back up - but THIS IS WRONG!!:
+        setSnappedIndex(closestIndex)
         //and return values as objects!!!!!
         return { snappedValue: closestValue, snappedIndex: closestIndex}
-
-    }, [sliderCurrentNormalised, normalisedStarts]);
+        // and snappedIndex is also now a dependency:
+    }, [sliderCurrentNormalised, normalisedStarts, setSnappedIndex]);
     //woohoo snapped value still works!!!
     console.log(snappedIndex)
 
@@ -69,6 +59,10 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
 
     // does what it says...
     const humanReadable = new Date(snappedUnixTimestamp * 1000).toLocaleDateString()
+
+    // now I need to make this the currentYear
+    const year = new Date(snappedUnixTimestamp * 1000).getFullYear()
+    console.log(year)
 
     // this also from chatgpt - to my shame:
     const sliderValue = useMemo(() => {
@@ -92,8 +86,12 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
 
     // but the tick marks are even... need to be proportional for UX.
     return (
-        <div>
-            
+        <div className="input-wrapper">
+            {/* <TextExplanation 
+                currentDay={currentDay}
+                snappedIndex={snappedIndex} 
+                allStoryEvents={allStoryEvents} 
+            /> */}
             <form 
                 style={ { 
                 position: 'absolute',  
@@ -117,10 +115,12 @@ export default function TimelineSlider({ currentDay, onDayChange, normalisedStar
                     onChange={handlePointerUp}
                 />
                 
-                <p style={{ margin: 0}}>Selected date: { humanReadable }</p>
-                <p style={{ margin: 0}}>Selected date: { snappedValue }</p>
-                <p style={{ margin: 0}}>Selected timestamp: { snappedUnixTimestamp }</p>
-                <p style={{ margin: 0, paddingBottom: '26px'}}>Selected event index number: { snappedIndex }</p>
+                <div className="input-results">
+                    <p style={{ margin: 0}}>Selected date: { humanReadable }</p>
+                    <p style={{ margin: 0}}>Selected date: { snappedValue }</p>
+                    <p style={{ margin: 0}}>Selected timestamp: { snappedUnixTimestamp }</p>
+                    <p style={{ margin: 0, paddingBottom: '26px'}}>Selected event index number: { snappedIndex }</p>
+                </div>
             </form>
         </div>
     )

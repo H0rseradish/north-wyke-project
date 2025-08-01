@@ -45,6 +45,10 @@ body,
   pointer-events: none;
 }
 
+.input-results > p {
+  pointer-events: none;
+}
+
 datalist {
   display: flex;
   /* flex-direction: column; */

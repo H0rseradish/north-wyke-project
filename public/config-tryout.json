@@ -275,12 +275,11 @@
     ],
     "story": [
         {
-            "name": "Improved? pattern for an event, with some nesting- what about an id?",
-            "eventType": "survey",
-            "description": "Something was surveyed",
+            "name": "The story begins",
+            "eventType": "",
+            "description": "Everything starts here",
             "timestamps": {
-                "start": {"unix": null, "humanReadable": ""},
-                "end": {"unix": null, "humanReadable": ""}
+                "start": {"unix": 1199145600, "humanReadable": "2008"}
             }
         },
         {
@@ -311,21 +310,21 @@
             }
         },
         {
-            "name": "Revised flow estimates",
-            "eventType": "survey",
-            "description": "Updated data to determine the hydrological monitoring design.",
-            "timestamps": {
-                "start": {"unix": 1250550000, "humanReadable":" August 18th 2009" },
-                "end": {"unix": 1250636400, "humanReadable": "August 18th 2009"}
-            }
-        },
-        {
             "name": "Flood Defence Consent",
             "eventType": "consent",
             "description": "Flood Defence Consent received from the UK Environment Agency. Necessary for Planning Consent",
             "timestamps": {
                 "start": {"unix": 1249081200, "humanReadable": "August 1st 2009"},
                 "end": {"unix": 1251759600, "humanReadable": "August 31st 2009"}
+            }
+        },
+        {
+            "name": "Revised flow estimates",
+            "eventType": "survey",
+            "description": "Updated data to determine the hydrological monitoring design.",
+            "timestamps": {
+                "start": {"unix": 1250550000, "humanReadable":" August 18th 2009" },
+                "end": {"unix": 1250636400, "humanReadable": "August 18th 2009"}
             }
         },
         {
@@ -365,6 +364,15 @@
             }
         },
         {
+            "name": "Lab facilities",
+            "eventType": "construction",
+            "description": "During 2010, separate laboratories were created to handle, soil, herbage, air and water, to facilitate efficient workflows and ensure quality control across samples.",
+            "timestamps": {
+                "start": {"unix": 1262304000, "humanReadable": "January 1st 2010"},
+                "end": {"unix": 1293840000, "humanReadable": "December 31st 2010"}
+            }
+        },
+        {
             "name": "Planning Consent",
             "eventType": "consent",
             "description": "Planning consent given for construction of the farm platform.",
@@ -401,20 +409,28 @@
             }
         },
         {
-            "name": "Lab facilities",
-            "eventType": "construction",
-            "description": "During 2010, separate laboratories were created to handle, soil, herbage, air and water, to facilitate efficient workflows and ensure quality control across samples.",
+            "name": "Field events data collection",
+            "eventType": "data",
+            "description": "Collection of field events (farming activities) data begins, eg ploughing, fertilising, cutting. Details??end/cutoff 2013?",
             "timestamps": {
-                "start": {"unix": 1262304000, "humanReadable": "January 1st 2010"},
-                "end": {"unix": 1293840000, "humanReadable": "December 31st 2010"}
+                "start": {"unix": 1294185600, "humanReadable": "January 5th 2011"}
             }
-        },{
+        },
+        {
             "name": "Flume cabins",
             "eventType": "construction",
             "description": "Something about the flume cabins - there are 15, 1 for each sub-catchment of the farmlets",
             "timestamps": {
                 "start": {"unix": 1296518400, "humanReadable": "February 1st 2011"},
                 "end": {"unix": 1301612400, "humanReadable": "March 31st 2011"}
+            }
+        },
+        {
+            "name": "Livestock data collection",
+            "eventType": "data",
+            "description": "Collection of livestock data begins, eg weights, locations. Details?? End?",
+            "timestamps": {
+                "start": {"unix": 1301526000, "humanReadable": "March 21st 2011"}
             }
         },
         {
@@ -436,30 +452,11 @@
             }
         },
         {
-            "name": "Field events data collection",
-            "eventType": "data",
-            "description": "Collection of field events (farming activities) data begins, eg ploughing, fertilising, cutting. Details??end/cutoff 2013?",
-            "timestamps": {
-                "start": {"unix": 1294185600, "humanReadable": "January 5th 2011"},
-                "end": {"unix": null, "humanReadable": null}
-            }
-        },
-        {
-            "name": "Livestock data collection",
-            "eventType": "data",
-            "description": "Collection of livestock data begins, eg weights, locations. Details?? End?",
-            "timestamps": {
-                "start": {"unix": 1301526000, "humanReadable": "March 21st 2011"},
-                "end": {"unix": null, "humanReadable": null}
-            }
-        },
-        {
             "name": "Soil moisture data collection",
             "eventType": "data",
             "description": "Measurements begin from Soil Moisture Stations (SMS), one per catchment (15 in total) and located approximately centrally within fields.",
             "timestamps": {
-                "start": {"unix": 1320019200, "humanReadable": "October 31st 2011"},
-                "end": {"unix": null, "humanReadable": null}
+                "start": {"unix": 1320019200, "humanReadable": "October 31st 2011"}
             }
         },
         {
@@ -467,8 +464,7 @@
             "eventType": "Water flow and water properties measurements begin, using bubble flow meters. Details??  Ends Apr 2015?",
             "description": "data",
             "timestamps": {
-                "start": {"unix": 1349046000, "humanReadable": "October 1st 2012"},
-                "end": {"unix": null, "humanReadable": null}
+                "start": {"unix": 1349046000, "humanReadable": "October 1st 2012"}
             }
         },
         {
@@ -494,17 +490,7 @@
             "eventType": "data",
             "description": "Collection begins of precipitation, air temperature, relative humidity, wind speed and wind direction data, measured at 15 minute intervals, for whole site.",
             "timestamps": {
-                "start": {"unix": 1366930800, "humanReadable": "April 26th 2013"},
-                "end": {"unix": null, "humanReadable": null}
-            }
-        },
-        {
-            "name": "Additional French drains ",
-            "eventType": "construction",
-            "description": "New drains added to divert the removed Top Burrows field drainage away from Catchment/Flume 4.",
-            "timestamps": {
-                "start": {"unix":  	1375311600, "humanReadable": "August 1st 2013"},
-                "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}
+                "start": {"unix": 1366930800, "humanReadable": "April 26th 2013"}
             }
         },
         {
@@ -543,7 +529,15 @@
                 "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}  
             }
         },
-
+        {
+            "name": "Additional French drains ",
+            "eventType": "construction",
+            "description": "New drains added to divert the removed Top Burrows field drainage away from Catchment/Flume 4.",
+            "timestamps": {
+                "start": {"unix":  	1375311600, "humanReadable": "August 1st 2013"},
+                "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}
+            }
+        },
         {
             "name": "Top Burrows removed",
             "eventType": "land",
@@ -608,6 +602,15 @@
             }
         },
         {
+            "name": "Phosphax analysers",
+            "eventType": "construction",
+            "description": "Phosphax analysers measuring both total and ortho-phosphate from here onwards. ***Is this the correct year? Should it be 2016? Check in instrument data - could be error in Appendix B",
+            "timestamps": {
+                "start": {"unix": 1423008000, "humanReadable": "February 4th 2015"},
+                "end": {"unix": 1423094400, "humanReadable": "February 4th 2015"}  
+            }
+        },
+        {
             "name": "Pluvio rain gauge added",
             "eventType": "construction",
             "description": "Added to meteorological site (to complement the 15 catchment tipping buckets)",
@@ -617,30 +620,12 @@
             }
         },
         {
-            "name": "Pressure transducers installed",
-            "eventType": "construction",
-            "description": "To replace bubbler flow meters",
-            "timestamps": {
-                "start": {"unix": 1441580400, "humanReadable": "September 7th 2015"},
-                "end": {"unix": 1442271600, "humanReadable": "September 14th 2015"}  
-            }
-        },
-        {
             "name": "Soil moisture sensors replaced",
             "eventType": "construction",
             "description": "Adcon A51760 model replaced with A51730 model",
             "timestamps": {
                 "start": {"unix": 1433113200, "humanReadable": "June 1st 2015"},
                 "end": {"unix": 1448928000, "humanReadable": "November 30th 2015"}  
-            }
-        },
-        {
-            "name": "Phosphax analysers",
-            "eventType": "construction",
-            "description": "Phosphax analysers measuring both total and ortho-phosphate from here onwards. ***Is this the correct year? Should it be 2016? Check in instrument data - could be error in Appendix B",
-            "timestamps": {
-                "start": {"unix": 1423008000, "humanReadable": "February 4th 2015"},
-                "end": {"unix": 1423094400, "humanReadable": "February 4th 2015"}  
             }
         },
         {
@@ -679,7 +664,6 @@
                 "end": {"unix": 1441062000, "humanReadable": "August 31st 2015"}
             }
         },
-        
         {
             "name": "Orchard Dean split into two fields",
             "eventType": "land",
@@ -687,6 +671,15 @@
             "timestamps": {
                 "start": {"unix": 1439420400, "humanReadable": "August 13th 2015"},
                 "end": {"unix": 1439506800, "humanReadable": "August 13th 2015"}  
+            }
+        },
+        {
+            "name": "Pressure transducers installed",
+            "eventType": "construction",
+            "description": "To replace bubbler flow meters",
+            "timestamps": {
+                "start": {"unix": 1441580400, "humanReadable": "September 7th 2015"},
+                "end": {"unix": 1442271600, "humanReadable": "September 14th 2015"}  
             }
         },
         {
@@ -712,8 +705,7 @@
             "eventType": "land",
             "description": "Several virtual fence lines per field identified by GPS, allowing  fields to be temporarily split into (typically two) sections using movable fences, to facilitate management of areas used for grazing and silage production (identified as 'field strips' in the Data Portal).",
             "timestamps": {
-                "start": {"unix": 1483228800, "humanReadable": "January 1st 2017"},
-                "end": {"unix": null, "humanReadable": null}  
+                "start": {"unix": 1483228800, "humanReadable": "January 1st 2017"}
             }
         },
         {
@@ -735,21 +727,20 @@
             }
         },
         {
-            "name": "Second system change period",
-            "eventType": "land",
-            "description": "A second period of system changes to the farm platform. The Red farmlet is converted to arable witha planned rotation of winter wheat, winter wheat, oats and beans, the cattle that would have grazed it housed until finishing in a fourth indoor farmlet, the Brown farmlet. Outdoor cattle and sheep production carried out on Green and Blue systems only.",
-            "timestamps": {
-                "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"},
-                "end": {"unix": null, "humanReadable": null}  
-            }
-        },
-        {
             "name": "Orr Small Ruminant Facility construction",
             "eventType": "construction",
             "description": "Dedicated sheep facility, separated into farmlets (not previously possible) for winter housing, with further separation for subgroups so ewes may have nutritional requirements optimised depending on number of lambs carried. Some pens are suitable for goats. The facility also includes 24 biocontrol units for feed intake studies",
             "timestamps": {
                 "start": {"unix": 1546300800, "humanReadable": "January 1st 2019"},
                 "end": {"unix": 1577836800, "humanReadable": "December 31st 2019"}  
+            }
+        },
+        {
+            "name": "Second system change period",
+            "eventType": "land",
+            "description": "A second period of system changes to the farm platform. The Red farmlet is converted to arable witha planned rotation of winter wheat, winter wheat, oats and beans, the cattle that would have grazed it housed until finishing in a fourth indoor farmlet, the Brown farmlet. Outdoor cattle and sheep production carried out on Green and Blue systems only.",
+            "timestamps": {
+                "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"}
             }
         },
         {

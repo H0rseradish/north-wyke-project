@@ -22,6 +22,9 @@ export default function App() {
     //for the timelineNav need initial state to be startYear:
     const [currentYear, setCurrentYear] = useState(null)
     //I KNEW the above was going to be a problem... because I had used startDay when initialising useState, which was never going to be there because react hooks always have to be before conditions! So THIS is what useEffect is for...!  I am getting a feel for it now.
+
+    // lifting state up - but there is something wrong - it is conflicting?
+    const [snappedIndex, setSnappedIndex] = useState(-1)
     
     // Sorted!:
     useEffect(() => {
@@ -46,7 +49,10 @@ export default function App() {
     return (
         <>  
             <TextExplanation 
-                currentDay={currentDay} />
+                currentDay={currentDay}
+                snappedIndex={snappedIndex} 
+                allStoryEvents={allStoryEvents} 
+            />
             <Canvas
                 camera={{ position: [0, 3, 6] }}
             >
@@ -60,10 +66,16 @@ export default function App() {
             <TimelineSlider 
                 currentDay={currentDay} 
                 onDayChange={setCurrentDay}
+                currentYear={currentYear} onYearChange={setCurrentYear}
                 startDay={startDay}
                 endDay={endDay}
+                startYear={startYear}
+                endYear={endYear}
                 normalisedStarts={normalisedStarts}
                 unixStarts={unixStarts}
+                // pass the snappedIndex state down to this TimelineSlider
+                setSnappedIndex={setSnappedIndex}
+                
             /> 
             {/* and a navigation with clickable years*/}
             <TimelineNav 
