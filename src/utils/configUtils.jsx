@@ -50,9 +50,12 @@ export default function useDerivedAppConstants() {
         // // the current year....
         const endYear = new Date().getFullYear()
         // console.log(endYear)
-        
-        //just to test it - will need to get array of all the years between
-        const years = [startYear, endYear]
+
+
+        // 1st param is the wanted length, 2nd is basically a map function (mdn): and inside the map (looping) function params are the current element and its index. So just add index to the startYear.
+        const yearsList = Array.from({length: endYear - startYear + 1}, (__, i) => startYear + i )
+
+        console.log(yearsList)
 
         // returning the status object!!! (with all the other things)
         return { 
@@ -62,7 +65,7 @@ export default function useDerivedAppConstants() {
             endDay, 
             startYear, 
             endYear,
-            years, 
+            yearsList, 
             normalisedStarts,
             unixStarts
          }

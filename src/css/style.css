@@ -49,6 +49,12 @@ body,
   pointer-events: none;
 }
 
+.description {
+  width: 20rem;
+  background-color: black;
+  opacity: 60%;
+}
+
 datalist {
   display: flex;
   /* flex-direction: column; */
@@ -61,8 +67,45 @@ datalist {
   cursor: pointer;
 }
 
+/* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
+
+/* getting rid of browser defaults and manually altering appearance of the range slider - source above*/
+
 input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
   width: 90vw;
-  margin-left: 5vw;
+  background: transparent;
   cursor: pointer;
 }
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #053a5f;
+  height: 1rem;
+}
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  background: #053a5f;
+  height: 1rem;
+}
+
+/* Styling the 'Thumb' */
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: 0px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  height: 1rem;
+  width: 0.5rem;
+}
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: #ffffff;
+  height: 1rem;
+  width: 0.5rem;
+}
+
+/* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */

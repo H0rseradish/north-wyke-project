@@ -45,7 +45,7 @@ export default function TextExplanation({allStoryEvents, snappedIndex}) {
             <p>{ date }</p>
                 <div>
                     <h2>{ storyName }</h2>
-                    <p>{ description }</p>
+                    <p className="description">{ description }</p>
                 </div>
         </div>
     );

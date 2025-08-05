@@ -2,7 +2,7 @@ import { useRef, useMemo, useState, useEffect } from "react";
 import { ConstantColorFactor } from "three/src/constants.js";
 // import TextExplanation from "./TextExplanation";
 
-export default function TimelineSlider({ currentDay, onDayChange, currentYear, onYearChange, years, normalisedStarts, unixStarts, setSnappedIndex }) {
+export default function TimelineSlider({ currentDay, onDayChange, currentYear, onYearChange, yearsList, normalisedStarts, unixStarts, setSnappedIndex }) {
 
     // console.log(unixStarts.length)
     // console.log(normalisedStarts.length)
@@ -20,8 +20,11 @@ export default function TimelineSlider({ currentDay, onDayChange, currentYear, o
 
     useEffect(() => {
     //find the width and set it!
-    const width = input.current.offsetWidth;
-    setInputWidth(width)
+        const width = input.current.offsetWidth;
+        setInputWidth(width)
+
+    //also now need to listen for window changes, need to make the above into function expression so can call it :
+
     }, []);
     //and it works:
     console.log(inputWidth)
@@ -96,7 +99,7 @@ export default function TimelineSlider({ currentDay, onDayChange, currentYear, o
     //will need to listen for changes to the window size?
     //and update the state of the input width? 
     
-    const timelineOptions = years.map((option, index) => 
+    const timelineOptions = yearsList.map((option, index) => 
         <option 
             key={ index } 
             value={ option } 

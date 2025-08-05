@@ -16,7 +16,7 @@ import ExperimentWithConfig from './ExperimentWithConfig';
 export default function App() {
     
     //wrap this in useMemo() - NO because its a custom hook. (the variables are wrapped in useMemo in the configUtils file, (after much tribulation)
-    const { allStoryEvents, startDay, endDay, startYear, endYear, years, normalisedStarts, unixStarts } = useDerivedAppConstants();
+    const { allStoryEvents, startDay, endDay, startYear, endYear, yearsList, normalisedStarts, unixStarts } = useDerivedAppConstants();
     
     //for the new timeline using unix seconds:
     const [currentDay, setCurrentDay] = useState(null)
@@ -72,7 +72,7 @@ export default function App() {
                 endDay={endDay}
                 startYear={startYear}
                 endYear={endYear}
-                years={years}
+                yearsList={yearsList}
                 normalisedStarts={normalisedStarts}
                 unixStarts={unixStarts}
                 // pass the snappedIndex state down to this TimelineSlider
