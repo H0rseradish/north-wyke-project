@@ -51,6 +51,8 @@ export default function useDerivedAppConstants() {
         const endYear = new Date().getFullYear()
         // console.log(endYear)
         
+        //just to test it - will need to get array of all the years between
+        const years = [startYear, endYear]
 
         // returning the status object!!! (with all the other things)
         return { 
@@ -59,7 +61,8 @@ export default function useDerivedAppConstants() {
             startDay, 
             endDay, 
             startYear, 
-            endYear, 
+            endYear,
+            years, 
             normalisedStarts,
             unixStarts
          }

@@ -16,16 +16,16 @@ export default function TextExplanation({allStoryEvents, snappedIndex}) {
 
     const snappedStoryEvent = allStoryEvents[snappedIndex]
     //gets the individual story that is snapped to
-    console.log(snappedStoryEvent)
+    // console.log(snappedStoryEvent)
 
     const snappedIndexTimestamp = snappedStoryEvent.timestamps.start.unix
 
-    console.log(snappedIndexTimestamp)
+    // console.log(snappedIndexTimestamp)
 
     //     
     const snappedStoryEvents = allStoryEvents.filter(storyEvent => storyEvent.timestamps.start.unix === snappedIndexTimestamp)
 
-    console.log(snappedStoryEvents)
+    // console.log(snappedStoryEvents)
 
 
     const storyName = allStoryEvents[snappedIndex].name;
