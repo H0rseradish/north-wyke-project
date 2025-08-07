@@ -110,3 +110,14 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
+
+.fade-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

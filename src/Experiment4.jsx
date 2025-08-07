@@ -18,7 +18,7 @@ const colors = {
 //now try to get the data out of appConfig not the geojson...
 //am I going to change this to days?
 
-export default function Experiment3({currentYear, appConfig}){
+export default function Experiment4({currentYear}){
     // useContext in action: the data is here!! not needed in Makefield
     //wait can I get these from App? 
     // (renaming geojsonData to fieldsData - is this wise? or stupidly unnecessary? to allow for geojson that's not fields?)
@@ -27,15 +27,17 @@ export default function Experiment3({currentYear, appConfig}){
     const [visible, setVisible] = useState(false)
     // console.log(appConfig)
 
+    //omigod chat suggested putting currentYear in as a dependency...(with the reset to false)
+    //ok this kind of works...but you see it kind of bounce...its the tension and friction in combination with the timeout... need to experiment.
     useEffect(() => {
-        //trigger animation after the component is loaded:
-        requestAnimationFrame(() => {
-            setVisible(true);
-        })
-    }, [])
+        setVisible(false); // reset visibility
+        const timeout = setTimeout(() => {
+            setVisible(true); // trigger animation after delay
+        }, 300); // small delay to force re-render
 
-    // below does not work inside Canvas!!! And caused a bug so I have left it here for future reference!!!
-    // if (!appConfig) return <p>Loading app config...</p>
+        return () => clearTimeout(timeout); // cleanup
+    }, [currentYear]);
+
 
     if(!fieldsData || fieldsData.length === 0) return null;
     console.log(fieldsData)
@@ -366,16 +368,21 @@ export default function Experiment3({currentYear, appConfig}){
     console.log(fieldsArray)
     
 
-    //OK I caved in and got this from chatgpt had not used Map() before...
+    //OK I caved in and got this from chatgpt - I had not used Map() before...
     // Build a map of OBJECTID -> color
     const fieldColorMap = new Map();
+
+    //Map.set() creates related pairs of things - in this case the id plus the color:
     yearData.fields.forEach(group => {
         group.ids.forEach(id => {
             fieldColorMap.set(id, group.color);
         });
     });
+    // its an object full of pairs of things connected by a fat arrow: eg {4 => 'gray', etc..}
+    console.log(fieldColorMap)
 
-    //this also adapted from chat using .has() (new to me I think?)
+
+    //this also adapted from chat using .has() (new to me I think?) 
     //get the actual geojson for the relevant fields:
     const fieldsToDisplay = fieldsData.filter((field) => 
         fieldColorMap.has(field.properties.OBJECTID)
@@ -385,16 +392,19 @@ export default function Experiment3({currentYear, appConfig}){
     return (
         fieldsToDisplay.map((field) => { 
             //these variables also came from the chatgpt response:
+            //so you can use get() to get something out of a Mapped pair:
             const fieldId = field.properties.OBJECTID;
             const color = fieldColorMap.get(fieldId);
 
+            // putting currentYear into the key apparently unmounts and remounts MakeField when the year changes:
             return(
             <>       
                 <MakeField 
-                    key={`field-${field.properties.OBJECTID}`} 
+                    key={`field-${currentYear}-${field.properties.OBJECTID}`} 
                     field={ field } 
                     // fieldName={ field.properties.name }
                     color={ color }
+                    visible={ visible }
                 />
                 <MakeBoundary 
                     key={ `boundary-${field.properties.OBJECTID}` } 
