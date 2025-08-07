@@ -8,6 +8,7 @@ import TimelineSlider from './TimelineSlider';
 import TextExplanation from "./TextExplanation";
 // much work still to do on this:
 import ExperimentWithConfig from './ExperimentWithConfig';
+import Experiment4 from './Experiment4';
 
 
 //I suppose all the time periods ought to be user controlled via config for a reusable app? Yes - done!!
@@ -16,7 +17,7 @@ import ExperimentWithConfig from './ExperimentWithConfig';
 export default function App() {
     
     //wrap this in useMemo() - NO because its a custom hook. (the variables are wrapped in useMemo in the configUtils file, (after much tribulation)
-    const { allStoryEvents, startDay, endDay, startYear, endYear, yearsList, normalisedStarts, unixStarts } = useDerivedAppConstants();
+    const { appConfig, allStoryEvents, startDay, endDay, startYear, endYear, yearsList, normalisedStarts, unixStarts } = useDerivedAppConstants();
     
     //for the new timeline using unix seconds:
     const [currentDay, setCurrentDay] = useState(null)
@@ -53,21 +54,23 @@ export default function App() {
                 currentDay={currentDay}
                 snappedIndex={snappedIndex} 
                 allStoryEvents={allStoryEvents} 
+                appConfig={appConfig}
             />
             <Canvas
-                camera={{ position: [0, 3, 6] }}
+                camera={{ position: [-6, 3, 6] }}
             >
                 <OrbitControls />
                 {/* so experience knows what year has been set */}
-                <ExperimentWithConfig currentYear={currentYear} currentDay={ currentDay}/>
+                <Experiment4 currentYear={currentYear} currentDay={ currentDay} appConfig={appConfig}/>
 
             </Canvas>
             
             {/* new timeline based on days */}
             <TimelineSlider 
                 currentDay={currentDay} 
-                onDayChange={setCurrentDay}
-                currentYear={currentYear} onYearChange={setCurrentYear}
+                setCurrentDay={setCurrentDay}
+                currentYear={currentYear} 
+                setCurrentYear={setCurrentYear}
                 startDay={startDay}
                 endDay={endDay}
                 startYear={startYear}

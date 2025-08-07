@@ -1,9 +1,9 @@
 {
-    "title": "Farm visualisation app",
+    "title": "Timeline visualisation",
     "version": "1.0",
     "app": {
         "author": "Sarah Hartill",
-        "farm": "NWFP"
+        "farm": "North Wyke Farm Platform"
     },
     "geojsonLayers": 
     {
@@ -357,7 +357,7 @@
         {
             "name": "Environmental Impact Assessment",
             "eventType": "survey",
-            "description": "Including an archaeological survey and a plan to mitigate the groundworks.Necessary for PLanning Consent.",
+            "description": "Including an archaeological survey and a plan to mitigate the groundworks. Necessary for Planning Consent.",
             "timestamps": {
                 "start": {"unix": 1259625600, "humanReadable": "December 1st 2009"},
                 "end": {"unix": 1262304000, "humanReadable": "December 31st 2009"}

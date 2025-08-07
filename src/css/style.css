@@ -60,6 +60,7 @@ datalist {
   /* flex-direction: column; */
   justify-content: space-between;
   font-size: 0.7em;
+  font-style: normal;
   /* text-align: center; */
   /* writing-mode: vertical-lr; */
   width: 90vw;
@@ -96,16 +97,16 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   margin-top: 0px; /* Centers thumb on the track */
   background-color: #ffffff;
-  height: 1rem;
-  width: 0.5rem;
+  height: 2.5rem;
+  width: 2px;
 }
 /* Firefox */
 input[type="range"]::-moz-range-thumb {
   border: none; /*Removes extra border that FF applies*/
   border-radius: 0; /*Removes default border-radius that FF applies*/
   background-color: #ffffff;
-  height: 1rem;
-  width: 0.5rem;
+  height: 2.5rem;
+  width: 2px;
 }
 
 /* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */

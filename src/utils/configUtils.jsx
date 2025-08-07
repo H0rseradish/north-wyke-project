@@ -8,7 +8,7 @@ import { useAllAppData } from "./jsonContext";
    
 export default function useDerivedAppConstants() {
 
-    const { appConfig }= useAllAppData();
+    const { appConfig } = useAllAppData();
 
     // Omigod the solution is to put everything inside useMemo? WAIT is this actually working? YES!!!
     const appConstants = useMemo(() => {
@@ -60,6 +60,7 @@ export default function useDerivedAppConstants() {
         // returning the status object!!! (with all the other things)
         return { 
             loading: false, 
+            appConfig,
             allStoryEvents, 
             startDay, 
             endDay, 
