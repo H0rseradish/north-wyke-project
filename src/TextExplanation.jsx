@@ -61,14 +61,19 @@ export default function TextExplanation({appConfig, allStoryEvents, snappedIndex
         return(
             <div key={storyId}>
                 <h3 
-                style={{ marginTop: "0.7rem", marginBottom: 0, color: "#a2b4c2ff", cursor: "pointer" }}
+                style={{ 
+                    marginTop: "0.7rem", 
+                    marginBottom: 0, 
+                    color: "#a2b4c2ff", 
+                    cursor: "pointer" 
+                }}
                 // have to do this below otherwise the function just gets called immediately:
                 onClick={() => toggleVisibility(storyId)}
                 >
                     { snappedStoryEvent.name } {visible ? "▼" : "▶"}
                 </h3>
                 {visible && (
-                    <p className="description" style={{ margin: 0 }}>
+                    <p className="description" style={{ marginTop: "0.5rem" }}>
                     { snappedStoryEvent.description } 
                     </p>
                 )}
@@ -84,7 +89,12 @@ export default function TextExplanation({appConfig, allStoryEvents, snappedIndex
             className='explanation' 
         >
             <div className='text-wrapper'>
-                <h1 style={{ marginBottom: 0, color: "#a2b4c2ff" }}>
+                <h1 
+                    style={{ 
+                        marginBottom: 0, 
+                        color: "#a2b4c2ff",
+                        fontWeight: "normal",
+                    }}>
                     { appHeading }
                 </h1>
 
@@ -92,7 +102,7 @@ export default function TextExplanation({appConfig, allStoryEvents, snappedIndex
                     { farmHeading }
                 </h2>
 
-                <h3 style={{ marginTop: "2rem", marginBottom: "0.5rem", fontSize: "1.4em"}}>
+                <h3 style={{ marginTop: "2rem", marginBottom: "1rem", fontSize: "1.4em"}}>
                     { date }
                 </h3>
                 { stories }
