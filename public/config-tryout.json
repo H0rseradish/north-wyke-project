@@ -275,6 +275,7 @@
     ],
     "story": [
         {
+            "id": 1,
             "name": "The story begins",
             "eventType": "",
             "description": "Everything starts here",
@@ -283,6 +284,7 @@
             }
         },
         {
+            "id": 2,
             "name": "Drainage Survey",
             "eventType": "survey",
             "description": "The existing open ditch network was surveyed",
@@ -292,6 +294,7 @@
             }
         },
         {
+            "id": 3,
             "name": "Topographic Survey",
             "eventType": "survey",
             "description": "15m gridded GPS ground level survey of proposed platform fields.",
@@ -301,6 +304,7 @@
             }
         },
         {
+            "id": 4,
             "name": "Hydrological Design",
             "eventType": "design",
             "description": "Identification of how catchments could be hydrologically isolated in terms of surface water taking into consideration groundwater interactions, and recommending flow monitoring stations locations and specifications.",
@@ -310,6 +314,7 @@
             }
         },
         {
+            "id": 5,
             "name": "Flood Defence Consent",
             "eventType": "consent",
             "description": "Flood Defence Consent received from the UK Environment Agency. Necessary for Planning Consent",
@@ -319,6 +324,7 @@
             }
         },
         {
+            "id": 6,
             "name": "Revised flow estimates",
             "eventType": "survey",
             "description": "Updated data to determine the hydrological monitoring design.",
@@ -328,6 +334,7 @@
             }
         },
         {
+            "id": 7,
             "name": "Badger Survey",
             "eventType": "survey",
             "description": "Describe and evaluate badger status, and identify both impacts and mitigation of the proposed works. Necessary for Planning Consent",
@@ -337,6 +344,7 @@
             }
         },
         {
+            "id": 8,
             "name": "Habitat and Protected Species Survey",
             "eventType": "survey",
             "description": "An Extended Phase 1 Habitat and Protected Species Survey conducted to identify records relating to bats and other notable species, and to search for field signs of protected species or habitats that could support them. Necessary for Planning Consent",
@@ -346,6 +354,7 @@
             }
         },
         {
+            "id": 9,
             "name": "Tree Species and Condition Survey",
             "eventType": "survey",
             "description": "Tree Species and Condition Survey and Constraints Plan conducted, in relation to Root Protection Areas. Location, species, dimensions, age class, condition and remaining lifespan identified and a Protection Plan and Arboricultural Method Statement produced against inadvertent damage. Necessary for Planning Consent",
@@ -355,6 +364,7 @@
             }
         },
         {
+            "id": 10,
             "name": "Environmental Impact Assessment",
             "eventType": "survey",
             "description": "Including an archaeological survey and a plan to mitigate the groundworks. Necessary for Planning Consent.",
@@ -364,6 +374,7 @@
             }
         },
         {
+            "id": 11,
             "name": "Lab facilities",
             "eventType": "construction",
             "description": "During 2010, separate laboratories were created to handle, soil, herbage, air and water, to facilitate efficient workflows and ensure quality control across samples.",
@@ -373,6 +384,7 @@
             }
         },
         {
+            "id": 12,
             "name": "Planning Consent",
             "eventType": "consent",
             "description": "Planning consent given for construction of the farm platform.",
@@ -382,6 +394,7 @@
             }
         },
         {
+            "id": 13,
             "name": "French Drains and Flumes",
             "eventType": "construction",
             "description": "9.2km of French drains constructed, leading first to confluence pits, then to sampling pits and individually sized open channel flow nozzles (H-flumes) at the catchment outlets.", 
@@ -391,6 +404,7 @@
             }
         },
         {
+            "id": 14,
             "name": "Fencing and tracks",
             "eventType": "construction",
             "description": "Once the French drains had been laid the fields were fenced to avoid damage or contamination by grazing animals.  **Double-check that the fenced-fields data used excludes these areas**  Add next bit to to 2017??? Called field strips in data portal!: In addition, virtual fence lines were identified using GPS... etc",
@@ -400,6 +414,7 @@
             }
         },
         {
+            "id": 15,
             "name": "Mains electricity and fibre-optic infrastructure",
             "eventType": "construction",
             "description": "Each flume supplied with mains electric power and a fibre optic cable-based data telemetry system, totalling over 5 km in length.",
@@ -409,6 +424,7 @@
             }
         },
         {
+            "id": 16,
             "name": "Field events data collection",
             "eventType": "data",
             "description": "Collection of field events (farming activities) data begins, eg ploughing, fertilising, cutting. Details??end/cutoff 2013?",
@@ -417,6 +433,7 @@
             }
         },
         {
+            "id": 17,
             "name": "Flume cabins",
             "eventType": "construction",
             "description": "Something about the flume cabins - there are 15, 1 for each sub-catchment of the farmlets",
@@ -426,6 +443,7 @@
             }
         },
         {
+            "id": 18,
             "name": "Livestock data collection",
             "eventType": "data",
             "description": "Collection of livestock data begins, eg weights, locations. Details?? End?",
@@ -434,6 +452,7 @@
             }
         },
         {
+            "id": 19,
             "name": "Data sensors and telemetry equipment",
             "eventType": "construction",
             "description": "Installation of measuring equipment in the flume cabins. Details??",
@@ -443,6 +462,7 @@
             }
         },   
         {
+            "id": 20,
             "name": "Baseline Measuring Period",
             "eventType": "land",
             "description": "During the baseline measuring period, all farm platform fields are managed as permanent pasture-based livestock systems with no separate treatments for the farmlets.",
@@ -452,6 +472,7 @@
             }
         },
         {
+            "id": 21,
             "name": "Soil moisture data collection",
             "eventType": "data",
             "description": "Measurements begin from Soil Moisture Stations (SMS), one per catchment (15 in total) and located approximately centrally within fields.",
@@ -460,6 +481,7 @@
             }
         },
         {
+            "id": 22,
             "name": "Water flow and properties data collection",
             "eventType": "Water flow and water properties measurements begin, using bubble flow meters. Details??  Ends Apr 2015?",
             "description": "data",
@@ -468,6 +490,7 @@
             }
         },
         {
+            "id": 23,
             "name": "Separate management of farmlets",
             "eventType": "land",
             "description": "The transition to individual management of three farmlets begins. The green farmlet remains as untreated permanent pasture (ie, unimproved by inorganic fertilisers). The blue farmlet is defined as pasture with increased legume use (for biological nitrogen fixation), and the red as pasture with planned reseeding (regular renewal with innovative grass varieties). The blue and red farmlets are ploughed and reseeded over a 28 month period, lasting until the end of the 2015 grazing season. ***** Check data for actual date, if available",
@@ -477,6 +500,7 @@
             }
         },
         {
+            "id": 24,
             "name": "Dedicated meteorological intruments installed", 
             "eventType": "construction",
             "description": "Precipitation, air temperature, relative humidity and wind speed and wind direction are measured at 15 minute intervals.  These are co-located next to UK Meteorological Office instruments that have been hosted on site since 1981.",
@@ -486,6 +510,7 @@
             }
         },
         {
+            "id": 25,
             "name": "Meteorological data collection",
             "eventType": "data",
             "description": "Collection begins of precipitation, air temperature, relative humidity, wind speed and wind direction data, measured at 15 minute intervals, for whole site.",
@@ -494,6 +519,7 @@
             }
         },
         {
+            "id": 26,
             "name": "Reseeding Red Catchment 2",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 2 (Great Field) with perennial ryegrass",
@@ -503,6 +529,7 @@
             }
         },
         {
+            "id": 27,
             "name": "Reseeding Red Catchment 15",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 15 (Longlands East) with festulolium",
@@ -512,6 +539,7 @@
             }
         },
         {
+            "id": 28,
             "name": "Reseeding Blue Catchment 8",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 8 (Higher Wyke Moor, Middle Wyke Moor) with perennial ryegrass and white clover",
@@ -521,6 +549,7 @@
             }
         },
         {
+            "id": 29,
             "name": "Reseeding Blue Catchment 14",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 14 (Longlands North) with festulolium and white clover",
@@ -530,6 +559,7 @@
             }
         },
         {
+            "id": 30,
             "name": "Additional French drains ",
             "eventType": "construction",
             "description": "New drains added to divert the removed Top Burrows field drainage away from Catchment/Flume 4.",
@@ -539,6 +569,7 @@
             }
         },
         {
+            "id": 31,
             "name": "Top Burrows removed",
             "eventType": "land",
             "description": "Top Burrows field (green farmlet, Catchment 4) is removed from the Farm Platform, to keep farmlet size consistent.",
@@ -548,6 +579,7 @@
             }
         },
         {
+            "id": 32,
             "name": "Boundary change to Burrows",
             "eventType": "land",
             "description": "Change to the eastern boundary of Burrows with the now removed Top Burrows. Burrows is consequently slightly reduced in area.",
@@ -557,6 +589,7 @@
             }
         },
         {
+            "id": 33,
             "name": "Dedicated cattle housing",
             "eventType": "construction",
             "description": "Three new cattle buildings constructed ai the North Wyke Rowden site during winter 2013/2014, providing dedicated housing, silage clamps and farmyard manure middens for each of the three farmlets",
@@ -566,6 +599,7 @@
             }
         },
         {
+            "id": 34,
             "name": "Solar radiation sensor added",
             "eventType": "construction",
             "description": "Added to meteorological site",
@@ -575,6 +609,7 @@
             }
         },
         {
+            "id": 35,
             "name": "Reseeding Red Catchment 3",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 3 (Poor Field, Ware Park) with perennial ryegrass",
@@ -584,6 +619,7 @@
             }
         },
         {
+            "id": 36,
             "name": "Reseeding Blue Catchment 9",
             "eventType": "",
             "description": "Ploughing and reseeding of Catchment 9 (Dairy South, Dairy Corner) with perennial ryegrass and white clover",
@@ -593,6 +629,7 @@
             }
         },
         {
+            "id": 37,
             "name": "Soil monitoring station added",
             "eventType": "construction",
             "description": "CEH COSMOS-UK soil monitoring station installed on Catchment 2",
@@ -602,6 +639,7 @@
             }
         },
         {
+            "id": 38,
             "name": "Phosphax analysers",
             "eventType": "construction",
             "description": "Phosphax analysers measuring both total and ortho-phosphate from here onwards. ***Is this the correct year? Should it be 2016? Check in instrument data - could be error in Appendix B",
@@ -611,6 +649,7 @@
             }
         },
         {
+            "id": 39,
             "name": "Pluvio rain gauge added",
             "eventType": "construction",
             "description": "Added to meteorological site (to complement the 15 catchment tipping buckets)",
@@ -620,6 +659,7 @@
             }
         },
         {
+            "id": 40,
             "name": "Soil moisture sensors replaced",
             "eventType": "construction",
             "description": "Adcon A51760 model replaced with A51730 model",
@@ -629,6 +669,7 @@
             }
         },
         {
+            "id": 41,
             "name": "Reseeding Red Catchment 1",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 1 (Pecketsford, Little Pecketsford) with perennial ryegrass",
@@ -638,6 +679,7 @@
             }
         },
         {
+            "id": 42,
             "name": "Reseeding Red Catchment 10",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 10 (Lower Wheaty) with perennial ryegrass",
@@ -647,6 +689,7 @@
             }
         },
         {
+            "id": 43,
             "name": "Reseeding Blue Catchment 7",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 7 (Lower Wyke Moor) with perennial ryegrass and white clover",
@@ -656,6 +699,7 @@
             }
         },
         {
+            "id": 44,
             "name": "Reseeding Blue Catchment 11",
             "eventType": "land",
             "description": "Ploughing and reseeding of Catchment 11 (Dairy East) with perennial ryegrass and white clover",
@@ -665,6 +709,7 @@
             }
         },
         {
+            "id": 45,
             "name": "Orchard Dean split into two fields",
             "eventType": "land",
             "description": "Orchard Dean is split into two fields: Orchard Dean North and Orchard Dean South (Green farmlet, Catchment 5). This is to create 7 fields per farmlet, facilitating triplet management (cattle grazing, sheep grazing and cutting)",
@@ -674,6 +719,7 @@
             }
         },
         {
+            "id": 46,
             "name": "Pressure transducers installed",
             "eventType": "construction",
             "description": "To replace bubbler flow meters",
@@ -683,6 +729,7 @@
             }
         },
         {
+            "id": 47,
             "name": "Triplet management begins ",
             "eventType": "land",
             "description": "The triplet system for management of the farmlets comes fully into operation during 2016, with the aim of making comparisons between farmlet enterprise management of equivalent areas. This was not always achievable prior to 2016 due to the reseeding phases.",
@@ -692,6 +739,7 @@
             }
         },
         {
+            "id": 48,
             "name": "Equipment upgrades",
             "eventType": "data",
             "description": "Upgrade of YSI 6600V2 multi-parameter sonde to YSI Exo.***Explain!!! Turbidity units changed from NTU to FNU. New loggers installed. Everything up and running by 29/10/16. Flume loggers were changed from Adcon A723 to OTT netDL for data transfer via the fibre optic network.",
@@ -701,6 +749,7 @@
             }
         },   
         {
+            "id": 49,
             "name": "Virtual fence lines identified",
             "eventType": "land",
             "description": "Several virtual fence lines per field identified by GPS, allowing  fields to be temporarily split into (typically two) sections using movable fences, to facilitate management of areas used for grazing and silage production (identified as 'field strips' in the Data Portal).",
@@ -709,6 +758,7 @@
             }
         },
         {
+            "id": 50,
             "name": "Phosphax instrumentation added to Catchment 3",
             "eventType": "data",
             "description": "Phosphax (phosphorus analyser) installed in Catchment 3 flume (red farmlet), in addition to those in Catchments 5 (green farmlet), 8 (blue farmlet and 2 (red farmlet) ",
@@ -718,6 +768,7 @@
             }
         },
         {
+            "id": 51,
             "name": "Blue Catchment 14 oversown",
             "eventType": "land",
             "description": "Catchment 14 (Longlands North) is oversown with a white clover mixture",
@@ -727,6 +778,7 @@
             }
         },
         {
+            "id": 52,
             "name": "Orr Small Ruminant Facility construction",
             "eventType": "construction",
             "description": "Dedicated sheep facility, separated into farmlets (not previously possible) for winter housing, with further separation for subgroups so ewes may have nutritional requirements optimised depending on number of lambs carried. Some pens are suitable for goats. The facility also includes 24 biocontrol units for feed intake studies",
@@ -736,6 +788,7 @@
             }
         },
         {
+            "id": 53,
             "name": "Second system change period",
             "eventType": "land",
             "description": "A second period of system changes to the farm platform. The Red farmlet is converted to arable witha planned rotation of winter wheat, winter wheat, oats and beans, the cattle that would have grazed it housed until finishing in a fourth indoor farmlet, the Brown farmlet. Outdoor cattle and sheep production carried out on Green and Blue systems only.",
@@ -744,6 +797,7 @@
             }
         },
         {
+            "id": 54,
             "name": "Red farmlet transition to arable",
             "eventType": "land",
             "description": "Sheep and lambs grazing the red farmlet are removed from the system. Red system cattle are transferred to housing. Existing grass sward of the entire red farmlet is sprayed off, ploughed and sown with winter wheat",
@@ -753,6 +807,7 @@
             }
         },
         {
+            "id": 55,
             "name": "Introduction of Brown system 4",
             "eventType": "land",
             "description": "Permanently housed cattle for evaluation of more intensive finishing.",
@@ -762,6 +817,7 @@
             }
         },
         {
+            "id": 56,
             "name": "Transition to twin management",
             "eventType": "land",
             "description": "Twin system for making comparisons between farmlet enterprise management of Green and Blue farmlets, after Red system transitioned to arable",
@@ -771,6 +827,7 @@
             }
         },
         {
+            "id": 57,
             "name": "Catchment 1 fields combined",
             "eventType": "land",
             "description": "Catchment 1 fields, Pecketsford and Little Pecketsford are combined into one field, Pecketsford(whole)No changes to overall size or shape",
@@ -780,6 +837,7 @@
             }
         },
         {
+            "id": 58,
             "name": "Red farmlet sown with winter wheat",
             "eventType": "land",
             "description": "Entire red farmlet sown with winter wheat",
@@ -789,6 +847,7 @@
             }
         },
         {
+            "id": 59,
             "name": "Red farmlet sown with winter oats",
             "eventType": "land",
             "description": "Entire red farmlet sown with winter wheat",
@@ -798,6 +857,7 @@
             }
         },
         {
+            "id": 60,
             "name": "Red farmlet sown with winter wheat",
             "eventType": "land",
             "description": "Entire red farmlet sown with winter wheat, using minimum tillage (no plough).",

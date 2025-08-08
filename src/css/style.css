@@ -39,10 +39,18 @@ body,
 .explanation {
   position: absolute;
   height: 100%;
+  margin-top: 0;
   padding-left: 2rem;
+  padding-right: 2rem;
+  width: 25vw;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   /* so can click on timeline etc: */
-  pointer-events: none;
+  /* pointer-events: none; */
+}
+/* need to think about pointerevents */
+.text-wrapper {
+  height: fit-content;
 }
 
 .input-results > p {
@@ -50,9 +58,7 @@ body,
 }
 
 .description {
-  width: 20rem;
-  background-color: black;
-  opacity: 60%;
+  font-size: 0.95em;
 }
 
 datalist {
@@ -65,7 +71,8 @@ datalist {
   /* writing-mode: vertical-lr; */
   width: 90vw;
   margin-left: 5vw;
-  cursor: pointer;
+  /* cursor: pointer; */
+  pointer-events: none;
 }
 
 /* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
@@ -78,6 +85,7 @@ input[type="range"] {
   width: 90vw;
   background: transparent;
   cursor: pointer;
+  padding-bottom: 2em;
 }
 /* Chrome, Safari, Opera, and Edge Chromium */
 input[type="range"]::-webkit-slider-runnable-track {

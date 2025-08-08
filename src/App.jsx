@@ -6,15 +6,14 @@ import useDerivedAppConstants from './utils/configUtils';
 
 import TimelineSlider from './TimelineSlider';
 import TextExplanation from "./TextExplanation";
-// much work still to do on this:
-import ExperimentWithConfig from './ExperimentWithConfig';
+
 import Experiment4 from './Experiment4';
 
 
 //I suppose all the time periods ought to be user controlled via config for a reusable app? Yes - done!!
 
 // this component is for holding the state so it can be passed around - ie shared, to both the 3d rendering component (Experience) and the Timelime (which is outside of the canvas, because it is not a r3f thing).
-export default function App() {
+export default function App() {  
     
     //wrap this in useMemo() - NO because its a custom hook. (the variables are wrapped in useMemo in the configUtils file, (after much tribulation)
     const { appConfig, allStoryEvents, startDay, endDay, startYear, endYear, yearsList, normalisedStarts, unixStarts } = useDerivedAppConstants();

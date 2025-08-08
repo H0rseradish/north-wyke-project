@@ -55,7 +55,7 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
 
     // So this gets both the snapped Value and the index, so that I can treat them in relation to each other: 
     // I couldnt have worked this out in the time without consulting chat:
-     const { snappedValue, snappedIndex} = useMemo(() => {
+    const { snappedValue, snappedIndex} = useMemo(() => {
         // this kind of thing ought to be a reflex by now, I know (but it isnt, if I'm honest):
         if(normalisedStarts.length === 0) 
             return { snappedValue2: null, snappedIndex: -1 };
@@ -63,15 +63,18 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
         let closestIndex = 0;
         let closestValue = normalisedStarts[0];
         // calculate the difference that is actually the smallest - see below: 
-        let smallestDiff = Math.abs(closestValue - sliderCurrentNormalised);
+        // let smallestDiff = Math.abs(closestValue - sliderCurrentNormalised);
+
+        // new calc based on pixel values to match tickmarks:
+        let smallestPixelDiff = Math.abs((closestValue * inputSliderWidth) - (sliderCurrentNormalised * inputSliderWidth))
         // loop through the normalised starts, and find the difference between each norm star value and the current slider value:
         for ( let i = 1; i < normalisedStarts.length; i++) {
             //for all of the starts, find the difference between each of the normalised Starts and the slider's value, - Math.abs to make sure it doesnt end up a negative number.
             const startsDiff = Math.abs(normalisedStarts[i] - sliderCurrentNormalised);
             // And if the current difference value is smaller than the smallest difference... 
-            if (startsDiff < smallestDiff) {
+            if (startsDiff < smallestPixelDiff) {
                 // ...then set this start value to be the smallest difference 
-                smallestDiff = startsDiff;
+                smallestPixelDiff = startsDiff;
                 // and set this start value to be the closest value:
                 closestValue = normalisedStarts[i];
                 // and the index to be the index
@@ -83,7 +86,9 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
         //and return values as objects!!!!!
         return { snappedValue: closestValue, snappedIndex: closestIndex}
         // and snappedIndex is also now a dependency:
-    }, [sliderCurrentNormalised, normalisedStarts, setSnappedIndex]);
+    }, [sliderCurrentNormalised, normalisedStarts, setSnappedIndex, inputSliderWidth]);
+
+
     //woohoo snapped value still works!!!
     // console.log(snappedIndex)
 
@@ -138,7 +143,8 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                 bottom: 30, 
                 width: '100%', 
                 textAlign: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                zIndex: 2
                 } }
             >
                 <datalist>
@@ -157,7 +163,7 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                     onPointerUp={handlePointerUp}
                     // but... need to keep onChange, otherwise slider becomes read only! what to do? Without this function, even an empty function makes it read only. Thankfully the snapping seems to be preventing it from firing off 100s of changes:
                     onChange={handlePointerUp}
-                    width={inputSlider.width}
+                    width={inputSliderWidth}
                 />
                 {/* div that sits on top of the range input element,to hold all the tiny tickmark divs */}
                 <div 
@@ -172,7 +178,7 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                         color: "red", 
                         height: "100%", 
                         pointerEvents: "none",
-                        zIndex: 0}}
+                        zIndex: 2}}
                 >   
                     {/* making a bunch of tiny divs within the div, each in the 'start' position */}
                     {normalisedStarts.map((start, index) => (
@@ -183,13 +189,13 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                                 top: "2.5rem",
                                 // each 'start' (normalised value so less than 1) is multiplied by the current width of the slider:
                                 //except- should I be distributing these the same way the snapping is distributed because the 'thumb' does not exactly align with the tickmarks - nearly, but not quite...
-                                left: `${start * inputSliderWidth}px`,
+                                left: `${start * inputSliderWidth - 1}px`,
                                 width: "2px",
                                 height: "1rem",
                                 backgroundColor: "white",
                                 opacity: 0.4,
                                 marginLeft: "5vw",
-                                pointerEvents: "none"
+                                pointerEvents: "inherit"
                             }}
                         />
                     ))}

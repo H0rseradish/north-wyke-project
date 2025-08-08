@@ -51,6 +51,9 @@ export default function useDerivedAppConstants() {
         const endYear = new Date().getFullYear()
         // console.log(endYear)
 
+        // If I do the below there is a problem with the distribution of years along the timeline... and I cant get my head around it.
+        //  const endYear = new Date(allStoryEvents[allStoryEvents.length - 1].timestamps.start.unix * 1000).getFullYear()
+
 
         // 1st param is the wanted length, 2nd is basically a map function (mdn): and inside the map (looping) function params are the current element and its index. So just add index to the startYear.
         const yearsList = Array.from({length: endYear - startYear + 1}, (__, i) => startYear + i )
