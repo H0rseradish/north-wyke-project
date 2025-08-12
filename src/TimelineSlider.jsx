@@ -5,7 +5,7 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
 
     // console.log(unixStarts.length)
     // console.log(normalisedStarts.length)
-    console.log(currentYear)
+    // console.log(currentYear)
 
     // so I can manipulate the html element: hooks MUST go here, before any conditions!!! otherwise violates Rules of Hooks... (not safe - gets skipped on some renders)
     //and I knew I would need this...!
@@ -40,7 +40,7 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
         }
     }, []);
     //and it works:
-    console.log(inputSliderWidth)
+    // console.log(inputSliderWidth)
     
     // so now I have the state of the input width at all times...  
 
@@ -98,17 +98,17 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
 
     // now I need to make this the currentYear (see handlePointerUp)
     const year = new Date(snappedUnixTimestamp * 1000).getFullYear()
-    console.log(year)
+    // console.log(year)
 
     // this also from chatgpt - to my shame:
     const sliderValue = useMemo(() => {
         return Math.round(snappedValue * 1000)
     }, [snappedValue]);
-    console.log(snappedValue)
+    // console.log(snappedValue)
 
     //now to sort the labels et on the slider -this is where Ineed to getaccesss to the html element (my useRef set up above...)
-    console.log(inputSlider)
-    console.log(inputSlider.current)
+    // console.log(inputSlider)
+    // console.log(inputSlider.current)
     // console.log(input.current.offsetWidth)
     //so... the above works... but only when the page has ALREADY LOADED WITHOUT IT... so this means that the initial state needs to be set and known?
     // console.log(window.innerWidth)

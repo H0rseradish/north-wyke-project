@@ -40,18 +40,26 @@ body,
   position: absolute;
   height: 100%;
   margin-top: 0;
+  width: 370px;
   padding-left: 2rem;
   padding-right: 2rem;
-  width: 370px;
   min-width: 380px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   /* so can click on timeline etc: */
-  /* pointer-events: none; */
+  pointer-events: all;
 }
 /* need to think about pointerevents */
 .text-wrapper {
+  position: absolute;
+  margin-top: 0;
+  width: 370px;
+  min-width: 380px;
+  padding-left: 2rem;
+  padding-right: 2rem;
   height: fit-content;
+  z-index: 3;
+  pointer-events: all;
 }
 
 .input-results > p {

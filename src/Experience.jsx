@@ -18,7 +18,7 @@ const colors = {
 //now try to get the data out of appConfig not the geojson...
 //am I going to change this to days?
 
-export default function Experiment4({currentYear}){
+export default function Experience({currentYear}){
     // useContext in action: the data is here!! not needed in Makefield
     //wait can I get these from App? 
     // (renaming geojsonData to fieldsData - is this wise? or stupidly unnecessary? to allow for geojson that's not fields?)
@@ -40,7 +40,7 @@ export default function Experiment4({currentYear}){
 
 
     if(!fieldsData || fieldsData.length === 0) return null;
-    console.log(fieldsData)
+    // console.log(fieldsData)
     
     // const configGreenFields = appConfig.fields.filter((field) => field.farmlet === "Green")
     // // console.log(configGreenFields)
@@ -348,11 +348,11 @@ export default function Experiment4({currentYear}){
     // console.log(fieldsData[0].properties)
     
     // currentYear actually returns an object, I AM AN IDIOT, forgot to destructure the prop! Leaving this comment in to remind me.
-    console.log(currentYear)
+    // console.log(currentYear)
 
     const yearData = displayByYear[currentYear];
     //so this is an object containing an array of 3 objects:
-    console.log(yearData)
+    // console.log(yearData)
 
     // because there might not be year data...
     if (!yearData) return [];
@@ -361,11 +361,11 @@ export default function Experiment4({currentYear}){
     // const fieldsToDisplay = fieldsToDisplayArrays.flat()
     // console.log(fieldsToDisplay)
 
-    console.log(yearData.fields)
+    // console.log(yearData.fields)
 
     //ok this works:
     const fieldsArray = yearData.fields.flatMap(fields => fields.ids)
-    console.log(fieldsArray)
+    // console.log(fieldsArray)
     
 
     //OK I caved in and got this from chatgpt - I had not used Map() before...
@@ -379,7 +379,7 @@ export default function Experiment4({currentYear}){
         });
     });
     // its an object full of pairs of things connected by a fat arrow: eg {4 => 'gray', etc..}
-    console.log(fieldColorMap)
+    // console.log(fieldColorMap)
 
 
     //this also adapted from chat using .has() (new to me I think?) 

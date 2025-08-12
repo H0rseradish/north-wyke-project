@@ -40,8 +40,9 @@ export default function MakeField( {field, fieldName, color, visible = true } ) 
                 shape.lineTo(coordinate[0] - OFFSET_X, coordinate[1] - OFFSET_Z);
             }
         })
-        console.log('Generating shape for field', field.properties.OBJECTID);
-        console.log('to see if this works:', field.geometry.coordinates);
+        //hmm got myself in a fix here...
+        // console.log('Generating shape for field', field.properties.OBJECTID);
+        // console.log('to see if this works:', field.geometry.coordinates);
         return shape
     }, [fieldCoords, field.properties.OBJECTID, field.geometry.coordinates]);
 
