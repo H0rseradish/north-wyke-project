@@ -34,27 +34,28 @@ body,
   height: 100%;
   /* prevent scroll: */
   overflow: hidden;
+  /* cursor: pointer; */
 }
 
 .explanation {
   position: absolute;
   height: 100%;
   margin-top: 0;
-  width: 370px;
+  width: 330px;
   padding-left: 2rem;
   padding-right: 2rem;
-  min-width: 380px;
+  min-width: 330px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   /* so can click on timeline etc: */
-  pointer-events: all;
+  pointer-events: none;
 }
 /* need to think about pointerevents */
 .text-wrapper {
   position: absolute;
   margin-top: 0;
-  width: 370px;
-  min-width: 380px;
+  width: 330px;
+  min-width: 330px;
   padding-left: 2rem;
   padding-right: 2rem;
   height: fit-content;
@@ -63,24 +64,6 @@ body,
 }
 
 .input-results > p {
-  pointer-events: none;
-}
-
-.description {
-  font-size: 0.95em;
-}
-
-datalist {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: space-between;
-  font-size: 0.7em;
-  font-style: normal;
-  /* text-align: center; */
-  /* writing-mode: vertical-lr; */
-  width: 90vw;
-  margin-left: 5vw;
-  /* cursor: pointer; */
   pointer-events: none;
 }
 
@@ -94,17 +77,17 @@ input[type="range"] {
   width: 90vw;
   background: transparent;
   cursor: pointer;
-  padding-bottom: 2rem;
+  padding-bottom: 2em;
 }
 /* Chrome, Safari, Opera, and Edge Chromium */
 input[type="range"]::-webkit-slider-runnable-track {
   background: #053a5f;
-  height: 1rem;
+  height: 1em;
 }
 /* Firefox */
 input[type="range"]::-moz-range-track {
   background: #053a5f;
-  height: 1rem;
+  height: 1em;
 }
 
 /* Styling the 'Thumb' */
@@ -125,7 +108,7 @@ input[type="range"]::-moz-range-thumb {
   height: 2.5em;
   width: 2px;
 }
-
+/* Above is from: */
 /* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
 
 .fade-container {

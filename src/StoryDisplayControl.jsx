@@ -4,14 +4,21 @@ import { useEffect, useState, } from "react";
 // feeling quite smug now
 // just a reminder to myself that the logoc to find all the events on a particular day happens in TextExplanation.jsx  
 
-export default function StoryEventsDisplay({snappedStoryEvents}) {
 
+//If I change the json I will need a condition in here: to show on the basis of the name not being a number, maybe? 
+
+
+export default function StoryDisplayControl({ snappedStoryEvents }) {
+    //should I move this state into the App.jsx? Can I?
     const [visibleDescription, setVisibleDescription] = useState(() => ({
         //the check is integrated with the '?'... from chat, but I like it.
         //just using the first one in the array directly is actually less confusing than separating it into a variable these days... 
-        //ok this works but only on load so I will need a conditional elsewhere - wait should I wrap in a UseEffect so updates as the snappedStoryEvents get updated?? yes, because the condition works but only on load, not on subsequent slider interactions. By Jove shes got it!
+        //ok this works but only on load so I will need a conditional elsewhere - wait should I wrap in a UseEffect so updates as the snappedStoryEvents get updated?? yes, because the condition works but only on load, not on subsequent slider interactions. By Jove shes got it!        
         [snappedStoryEvents[0]?.id]: true,
     }))
+
+    //this is often an array of length 1:
+    // console.log(snappedStoryEvents)
 
     // I am pathetically proud of working this out for myself!:
     // Maybe I am finally starting to get React..
@@ -50,10 +57,11 @@ export default function StoryEventsDisplay({snappedStoryEvents}) {
             <div key={ storyEvent.id } >
                 <h3 
                 style={{ 
-                    marginTop: "0.7rem", 
+                    marginTop: "0.4rem", 
                     marginBottom: 0, 
-                    color: "#a2b4c2ff", 
-                    cursor: "pointer" 
+                    color: "#a7b5c0ff", 
+                    cursor: "pointer",
+                    // pointerEvents: "all" 
                 }}
                 // have to do this below otherwise the function just gets called immediately:
                 //so only put the toggle on if there is more than one story... no? no this wasnt the right place??
@@ -61,13 +69,26 @@ export default function StoryEventsDisplay({snappedStoryEvents}) {
                 >
                     {/* look - no interim variables!! */}
                     { storyEvent.name } 
-                    { visibleDescription[storyEvent.id] ? " ▼" : " ▶" }
+                    { visibleDescription[storyEvent.id] 
+                        ? <span style={{
+                            color: "#89d457ff",
+                            fontSize: "0.8em",
+                            paddingLeft: "0.5em"
+                        }}> ▼
+                        </span> 
+                        : <span style={{
+                                color: "#89d457ff",
+                                fontSize: "0.8em",
+                                paddingLeft: "0.5em"
+                            }}> ▶</span> }
                 </h3>
 
                 {/* //if its true show its description */}
                 { visibleDescription[storyEvent.id] && 
-
-                    <p className="description" style={{ marginTop: "0.5rem" }}>
+                    <p 
+                        className="description" 
+                        style={{ marginTop: "0.5rem", pointerEvents: "none", fontSize: "0.95em" }}
+                    >
                     { storyEvent.description } 
                     </p>
                 }

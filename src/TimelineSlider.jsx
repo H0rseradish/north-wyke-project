@@ -13,9 +13,12 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
     //set the state because there needs to be a value that is not undefined?
     const [inputSliderWidth, setInputWidth] = useState(0);
 
-    // const windowWidth = window.innerWidth;
-    // console.log(windowWidth)
 
+
+    // i think I might need this: NOOOO no need.
+    // const datalistUl = useRef()
+    //no I need to get at the option elements! but there are many so how?- That's NOT the way...
+    
 
     useEffect(() => {
     //find the width and set it!
@@ -43,9 +46,6 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
     // console.log(inputSliderWidth)
     
     // so now I have the state of the input width at all times...  
-
-    // currentDay is getting the unix seconds... where should normalisation happen? NOT HERE - IN UTILS but this is wrong! The slider works but... the value is 1 not on first load.. sorted in App.
-    // console.log(currentDay / 1000)
     
     const sliderCurrentNormalised = currentDay / 1000
     // console.log(sliderCurrentNormalised)
@@ -106,34 +106,52 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
     }, [snappedValue]);
     // console.log(snappedValue)
 
-    //now to sort the labels et on the slider -this is where Ineed to getaccesss to the html element (my useRef set up above...)
-    // console.log(inputSlider)
-    // console.log(inputSlider.current)
-    // console.log(input.current.offsetWidth)
-    //so... the above works... but only when the page has ALREADY LOADED WITHOUT IT... so this means that the initial state needs to be set and known?
-    // console.log(window.innerWidth)
-    //will need to listen for changes to the window size?
-    //and update the state of the input width? 
+
+    // wait, do I also need to put a ref on the datalist element? to get to it - NO
+    // so how to bolden the currentYear?
+    // need to find the item in the yearslist Array that matches current Year. 
+    // need to bolden that one only, and also change it as the input changes... so state - ITS ALREADY HANDLED AS CURRENTYEAR!
+
+    // OK I cannot use datalist element then because it is not part of the dom when rendered... 
+
+    //try a filter - 
+    const currentYearFromYearsList = yearsList.filter((year) => (year === currentYear))
+    //this works - it gets an array of length 1...
+    // console.log(currentYearFromYearsList)
+
     
-    const timelineOptions = yearsList.map((option, index) => 
-        <option 
-            key={ index }
-            className= { year } 
-            value={ option } 
-            label={ option } 
-        />
-    )
-     
     // handle changes to the range input:
     const handlePointerUp =(e) => {
         // console.log(e.target);
+        //THINK!
+        // I could put a condition in here? buth then what - how to grab the relevant thing out of the datalist 
+        // console.log(currentYearFromYearsList[0])
+        // console.log(yearsList)
+        // console.log(currentYear)
+        // console.log(datalistUl.current)
+        // so maybe put a conditional in here?
+    
         setCurrentDay(e.target.value)
         setCurrentYear(year)
     }
 
-    //  const handleOnChange = () => {
-    //     // not needed? not entirely sure.
-    // }
+
+    const timelineOptions = yearsList.map((option, index) => 
+        <li 
+            role="option"
+            key={ index }
+            value={ option } 
+            label={ option } 
+            //wait but do we even want user to do this? NOOOOOO!
+            // just a condition to make it bold? YES How is this so simple???
+            style={{
+                fontWeight: option === currentYear ? "bold" : "normal",
+                color: option === currentYear ? "#89d457ff" : "#ffffff"
+            }}
+        >
+        {option}   
+        </li>
+    )
 
     return (
         <div className="input-wrapper">
@@ -147,10 +165,28 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                 zIndex: 2
                 } }
             >
-                <datalist>
+                <ul
+                    // ref={ datalistUl }
+                    role="datalist"
+                    style={{ 
+                        top: "2em",
+                        position: "absolute",
+                        marginBottom: "2rem",
+                        marginLeft: "5vw",
+                        paddingLeft: 0,
+                        display: "flex",
+                        justifyContent: "space-between",
+                        fontSize: "0.8em",
+                        width: "90vw",
+                        listStyle: "none",
+                        cursor: "pointer",
+                        pointerEvents: "inherit"
+                    }}
+                >
                     { timelineOptions }
-                </datalist>
+                </ul>
                 <input 
+                    // NB styled as element in the css
                     ref={ inputSlider }
                     type="range" 
                     id="range"
@@ -167,7 +203,6 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                 />
                 {/* div that sits on top of the range input element,to hold all the tiny tickmark divs */}
                 <div 
-                    className="tickmarks" 
                     style={{ 
                         position: "absolute",
                         top: 0,
@@ -186,12 +221,12 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                             key={index}
                             style={{
                                 position: "absolute",
-                                top: "2.5rem",
+                                top: "1em",
                                 // each 'start' (normalised value so less than 1) is multiplied by the current width of the slider:
                                 //except- should I be distributing these the same way the snapping is distributed because the 'thumb' does not exactly align with the tickmarks - nearly, but not quite...
                                 left: `${start * inputSliderWidth - 1}px`,
                                 width: "2px",
-                                height: "1rem",
+                                height: "1em",
                                 backgroundColor: "white",
                                 opacity: 0.4,
                                 marginLeft: "5vw",
@@ -200,7 +235,6 @@ export default function TimelineSlider({ currentDay, setCurrentDay, currentYear,
                         />
                     ))}
                 </div>
-                
                 {/* get rid: */}
                 {/* <div className="input-results">
                     <p style={{ margin: 0}}>Selected year: { year }</p>

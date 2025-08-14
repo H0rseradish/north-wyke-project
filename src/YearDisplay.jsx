@@ -1,77 +1,79 @@
-import { useEffect, useState, } from "react";
+export default function YearDisplay({ currentYear,  appConfig }) {
+    //so...state of current Year is coming from App
 
-// trying to solve chicken and egg....
-// feeling quite smug now
-// just a reminder to myself that the logoc to find all the events on a particular day happens in TextExplanation.jsx  
+    //but what if there is a mistake...
+    // const yearChapter = appConfig.chapters.filter(chapter =>
+    //     chapter.name === currentYear
+    // )
+    // console.log(yearChapter)
+//--------------------------------------------------
+//SORTED!!!!!
+    // for when I change the json:
+    const highlights = appConfig.story.filter(storyEvent =>
+        storyEvent.isHighlight === true
+    )
+    //ok this works:
+    // console.log(highlights)
 
-export default function YearEventsDisplay({snappedStoryEvents}) {
+    //well I haven't made the json like this  - will need to extract the date from the timestamps to do the comparison:
+    // const currentHighlight = highlights.filter(highlight =>
+    //     Number(highlight.name) === currentYear
+    // )
 
-    const [visibleDescription, setVisibleDescription] = useState(() => ({
-        //the check is integrated with the '?'... from chat, but I like it.
-        //just using the first one in the array directly is actually less confusing than separating it into a variable these days... 
-        //ok this works but only on load so I will need a conditional elsewhere - wait should I wrap in a UseEffect so updates as the snappedStoryEvents get updated?? yes, because the condition works but only on load, not on subsequent slider interactions. By Jove shes got it!
-        [snappedStoryEvents[0]?.id]: true,
-    }))
+    const currentHighlight = highlights.filter((highlight) => {
+        // base it on the unix as superior to human readable?
+       const timestamp = highlight.timestamps.start.unix
+       // (forgot the * 1000 at first... like a twat!)
+       const year = new Date(timestamp * 1000).getFullYear();
+       return year === currentYear
+    })
+    // ok this gets it but its an array of one - see way of dealing with this in jsx
+    // console.log(currentHighlight)
+    
+    return (
+        <div 
+            style={{
+                position: "absolute",
+                bottom: 30,
+                width: "100%",
+                height: "fit-content",
+                // marginTop: "50vh",
+                paddingBottom: "4rem",
+                pointerEvents: "none",
+                textAlign: "end",
+                zIndex: 2,
+            }}>
 
-    // I am pathetically proud of working this out for myself!:
-    // Maybe I am finally starting to get React..
-    useEffect(() => {
-        //and of course I didnt even need a condition because [0] should ALWAYS be visible!!!!
-        setVisibleDescription( {
-                    [snappedStoryEvents[0].id]: true,
-                })
-    }, [snappedStoryEvents])
-
-    //just use the id directly to reduce complication??
-    //it is clearer I think
-    const ToggleVisibility = (id) => {
-        // NOOOOOOO another react chicken and egg?????
-            //condition here NO!!!! This is all wrong
-            // if (snappedStoryEvents.length > 1)
-            //     setVisibleDescription( {
-            //         [snappedStoryEvents[0].id]: true,
-            //     })
-            // else
-
-            //set the react state to update based on the previous state
-            setVisibleDescription((previous) => ({
-                // spread (copy) all the previous stories (state)
-                ...previous,
-                //the toggle, which controls what gets put into state:
-
-                //so how do I set an initial state??:- I will need an object like this except it will just be true:
-                //  [firstStoryId]: true - see above....
-                [id]: !previous[id]
-        }))
-    }
-    // now this is separated its clearer what is going on. When it was one file there were two lengthy return staements which were confusing to navigate for me.
-   //the mapping can be here now:
-        return snappedStoryEvents.map((storyEvent) => (
-            <div key={ storyEvent.id } >
-                <h3 
-                style={{ 
-                    marginTop: "0.7rem", 
-                    marginBottom: 0, 
-                    color: "#a2b4c2ff", 
-                    cursor: "pointer" 
+            <h2 
+                style={{
+                    position:"absolute",
+                    bottom: 110,
+                    right: 5,
+                    width: "100%",
+                    paddingRight: "5vw",
+                    paddingLeft: "5vw",
+                    fontSize: "5em",
+                    // lineHeight: "1.2em",
+                    color: "#89d457ff",
+                    opacity: 0.35,
+                    margin: 0
                 }}
-                // have to do this below otherwise the function just gets called immediately:
-                //so only put the toggle on if there is more than one story... no? no this wasnt the right place??
-                onClick={ () => ToggleVisibility(storyEvent.id)}
-                >
-                    {/* look - no interim variables!! */}
-                    { storyEvent.name } 
-                    { visibleDescription[storyEvent.id] ? " ▼" : " ▶" }
-                </h3>
+            >
+                { currentYear }
+            </h2>
 
-                {/* //if its true show its description */}
-                { visibleDescription[storyEvent.id] && 
+            <p 
+                style={{
+                    paddingRight: "5vw",
+                    paddingLeft: "5vw",
+                    fontSize: "1.7em",
+                    lineHeight: "1.2em",
+                    margin: 0
+                }}
+            >
+                { currentHighlight.length === 1 ? currentHighlight[0].highlightText : '' }
+            </p>
 
-                    <p className="description" style={{ marginTop: "0.5rem" }}>
-                    { storyEvent.description } 
-                    </p>
-                }
-
-            </div>
-        )); 
+        </div>
+    ); 
 }

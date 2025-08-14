@@ -5,9 +5,9 @@ import { OrbitControls } from "@react-three/drei";
 import useDerivedAppConstants from './utils/configUtils';
 
 import TimelineSlider from './TimelineSlider';
-import TextExplanation from "./TextDisplay";
-
-import Experience from './Experience';
+import TextDisplay from './TextDisplay';
+import YearDisplay from './YearDisplay';
+import Experience from './ExperienceRefactor';
 
 
 //I suppose all the time periods ought to be user controlled via config for a reusable app? Yes - done!!
@@ -49,18 +49,27 @@ export default function App() {
 
     return (
         <>  
-            <TextExplanation 
-                currentDay={currentDay}
+            <TextDisplay 
                 snappedIndex={snappedIndex} 
                 allStoryEvents={allStoryEvents} 
                 appConfig={appConfig}
             />
+            <YearDisplay 
+                appConfig={appConfig}
+                currentYear={currentYear}
+            />
             <Canvas
-                camera={{ position: [-6, 3, 6] }}
+                camera={{ position: [-6, 6, 6] }}
             >
                 <OrbitControls />
                 {/* so experience knows what year has been set */}
-                <Experience currentYear={currentYear} currentDay={ currentDay} appConfig={appConfig}/>
+                <Experience 
+                    currentYear={currentYear}
+                    currentDay={currentDay} 
+                    appConfig={appConfig}
+                    yearsList={yearsList}
+                    snappedIndex={snappedIndex}
+                />
 
             </Canvas>
             

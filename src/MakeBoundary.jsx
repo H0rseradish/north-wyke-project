@@ -39,7 +39,7 @@ export default function MakeBoundary( {field, color} ) {
 
     // scale here is much better than messing with extreme values on the camera - which is what I was doing in the vanilla app:
     return (
-            <mesh scale= { 0.015 } position={[-1, 0.05, -1]} rotation={ [Math.PI, 0, 0] }>
+            <mesh scale= { 0.012 } position={[-1, 2.55, 1.15]} rotation={ [Math.PI, 0, 0] }>
                 <line geometry={ geometry }>
                     <lineBasicMaterial color={ color } />
                 </line>      

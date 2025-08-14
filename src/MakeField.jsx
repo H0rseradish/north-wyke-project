@@ -66,8 +66,8 @@ export default function MakeField( {field, fieldName, color, visible = true } ) 
     // putting the scale on here is much better than messing with extreme values on the camera - which is what I was doing in the vanilla app:
     return (
             <a.mesh 
-                scale= { 0.015 } 
-                position={[-1, 0, -1]} 
+                scale= { 0.012 } 
+                position={[-1, 2.5, 1.15]} 
                 rotation={ [Math.PI * - 0.5, 0, 0] }
             >
                 <extrudeGeometry args={ [ fieldShape,  extrudeSettings ] } />

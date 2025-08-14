@@ -1,9 +1,9 @@
-import StoryEventsDisplay from "./StoryDisplayControl";
+import StoryDisplayControl from "./StoryDisplayControl";
 
 //separated out to hopefully solve the chicken and egg situation of needing a conditional before setting state.
 //it is also a lot easier to work out whats going on. 
 
-export default function TextExplanation({appConfig, allStoryEvents, snappedIndex}) {
+export default function TextDisplay({appConfig, allStoryEvents, snappedIndex}) {
 
     // check its all here - probably this message is a fudge (not sure) but I am leaving it for now:
     if (!allStoryEvents || snappedIndex < 0 || !allStoryEvents[snappedIndex]) { 
@@ -37,6 +37,8 @@ export default function TextExplanation({appConfig, allStoryEvents, snappedIndex
                         marginBottom: 0, 
                         color: "#a2b4c2ff",
                         fontWeight: "normal",
+                        fontSize: "1.75em",
+                        pointerEvents: "all"
                     }}>
                     { appHeading }
                 </h1>
@@ -45,11 +47,11 @@ export default function TextExplanation({appConfig, allStoryEvents, snappedIndex
                     { farmHeading }
                 </h2>
 
-                <h3 style={{ marginTop: "2rem", marginBottom: "1rem", fontSize: "1.4em"}}>
+                <h3 style={{ marginTop: "2rem", marginBottom: "0", fontSize: "1.5em", color: "#89d457ff"}}>
                     { date }
                 </h3>
 
-                <StoryEventsDisplay snappedStoryEvents={ snappedStoryEvents }/>
+                <StoryDisplayControl snappedStoryEvents={ snappedStoryEvents }/>
 
             </div>
         </>

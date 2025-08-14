@@ -57,8 +57,9 @@ export default function useDerivedAppConstants() {
 
         // 1st param is the wanted length, 2nd is basically a map function (mdn): and inside the map (looping) function params are the current element and its index. So just add index to the startYear.
         const yearsList = Array.from({length: endYear - startYear + 1}, (__, i) => startYear + i )
+        //i could have just got this out of the json now that I have added year chapters to it.. (the json) Actually I probably should change this - single source of truth.
 
-        console.log(yearsList)
+        // console.log(yearsList)
 
         // returning the status object!!! (with all the other things)
         return { 
