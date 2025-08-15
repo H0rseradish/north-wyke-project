@@ -18,7 +18,7 @@ export default function StoryDisplayControl({ snappedStoryEvents }) {
     }))
 
     //this is often an array of length 1:
-    // console.log(snappedStoryEvents)
+    console.log(snappedStoryEvents)
 
     // I am pathetically proud of working this out for myself!:
     // Maybe I am finally starting to get React..
@@ -54,6 +54,7 @@ export default function StoryDisplayControl({ snappedStoryEvents }) {
     // now this is separated its clearer what is going on. When it was one file there were two lengthy return staements which were confusing to navigate for me.
    //the mapping can be here now:
         return snappedStoryEvents.map((storyEvent) => (
+            
             <div key={ storyEvent.id } >
                 <h3 
                 style={{ 
@@ -84,15 +85,27 @@ export default function StoryDisplayControl({ snappedStoryEvents }) {
                 </h3>
 
                 {/* //if its true show its description */}
-                { visibleDescription[storyEvent.id] && 
-                    <p 
-                        className="description" 
-                        style={{ marginTop: "0.5rem", pointerEvents: "none", fontSize: "0.95em" }}
-                    >
-                    { storyEvent.description } 
-                    </p>
-                }
+                { visibleDescription[storyEvent.id] && (
+                    <>
+                        <p 
+                            className="description" 
+                            style={{ marginTop: "0.5rem", pointerEvents: "none", fontSize: "0.95em" }}
+                        >
+                        { storyEvent.description } 
+                        </p>
 
+                        {/* // if there is an image in the json display iy */}
+                        { storyEvent.imageUrl && (
+                            <img 
+                                src={storyEvent.imageUrl}
+                                style={{
+                                    maxWidth: "100%",
+                                    maxHeight: "400px"
+                                }}
+                            />
+                        )}
+                    </>
+                )}
             </div>
         )); 
 }

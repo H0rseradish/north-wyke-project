@@ -156,7 +156,7 @@ export default function Experience({currentYear, snappedIndex}){
     //     yearDisplay.includes(field.properties.OBJECTID)
     // );
 
-    //so need to separate out boundary display from field display I think:
+    //so need to separate out boundary display from field display I think: yet to do...
     return (
         fieldsToDisplay.map((field) => { 
             //these variables also came from the chatgpt response:
@@ -183,5 +183,5 @@ export default function Experience({currentYear, snappedIndex}){
             </>
             )
         })
-    )    
+    )      
 }  

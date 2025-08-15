@@ -279,7 +279,8 @@
             "timestamps": {
                 "start": {"unix": 1199145600, "humanReadable": "2008"}
             },
-            "fields": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22]
+            "fields": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22],
+            "imageUrl": "./images/nw_buildings2.png"
         
         },
         {
@@ -418,7 +419,8 @@
             "timestamps": {
                 "start": {"unix": 1272668400, "humanReadable": "May 1st 2010"},
                 "end": {"unix": 1288569600, "humanReadable": "October 31st 2010"}
-            }
+            },
+            "imageUrl": "./images/flume.jpg"
         },
         {
             "id": 14,
@@ -462,7 +464,8 @@
             "timestamps": {
                 "start": {"unix": 1296518400, "humanReadable": "February 1st 2011"},
                 "end": {"unix": 1301612400, "humanReadable": "March 31st 2011"}
-            }
+            },
+            "imageUrl": "./images/flumecabin.jpg"
         },
         {
             "id": 18,
@@ -472,7 +475,8 @@
             "description": "Collection of livestock data begins, eg weights, locations. Details?? End?",
             "timestamps": {
                 "start": {"unix": 1301526000, "humanReadable": "March 21st 2011"}
-            }
+            },
+            "imageUrl": "./images/sheep.jpg"
         },
         {
             "id": 19,
@@ -534,7 +538,7 @@
                 "start": {"unix": 1364770800, "humanReadable": "April 1st 2013"},
                 "end": {"unix": 1446336000, "humanReadable": "October 31st 2015"}  
             },
-            "fields": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22]
+            "fields": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
         },
         {
             "id": 24,
@@ -668,7 +672,7 @@
                 "start": {"unix": 1404169200, "humanReadable": "July 1st 2014"},
                 "end": {"unix": 1409526000, "humanReadable": "August 31st 2014"}
             },
-            "fields": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22]
+            "fields": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
         },
         {
             "id": 36,
@@ -970,9 +974,9 @@
             "eventType": "storyEnd",
             "timelinePeriod": "farmlet",
             "isHighlight": true,
-            "description": "Check back for the latest information",
+            "description": "Check back later for more information",
             "timestamps": {
-                "start": {"unix": 1735689600, "humanReadable": "January 1st 2025"}
+                "start": {"unix": 1735689600, "humanReadable": "2025"}
             },
             "fields": [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26]
         }
