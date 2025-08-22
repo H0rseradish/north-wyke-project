@@ -55,7 +55,7 @@ export default function YearDisplay({ currentYear,  appConfig }) {
                     fontSize: "5em",
                     // lineHeight: "1.2em",
                     color: "#89d457ff",
-                    opacity: 0.35,
+                    opacity: 0.6,
                     margin: 0
                 }}
             >

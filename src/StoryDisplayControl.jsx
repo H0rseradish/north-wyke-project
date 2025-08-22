@@ -74,7 +74,8 @@ export default function StoryDisplayControl({ snappedStoryEvents }) {
                         ? <span style={{
                             color: "#89d457ff",
                             fontSize: "0.8em",
-                            paddingLeft: "0.5em"
+                            paddingLeft: "0.5em",
+                            opacity: 0.6
                         }}> ▼
                         </span> 
                         : <span style={{
@@ -100,7 +101,7 @@ export default function StoryDisplayControl({ snappedStoryEvents }) {
                                 src={storyEvent.imageUrl}
                                 style={{
                                     maxWidth: "100%",
-                                    maxHeight: "400px"
+                                    maxHeight: "30vh"
                                 }}
                             />
                         )}
