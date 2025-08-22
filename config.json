@@ -275,7 +275,7 @@
             "timelinePeriod": "construction",
             "isHighlight": true,
             "highlightText": "Designs begin for a research farm at North Wyke in Devon",
-            "description": "A number of surveys are carried out over a period of two years, with the aims of of both informing the design of the farm, incuding the division of the land into 15 runoff catchments, and gaining planning permission for the necessary construction.",
+            "description": "A number of surveys were carried out over a period of two years, to inform the design of the farm. This included the division of the land into 15 runoff catchments, and gaining planning permission for the necessary construction.",
             "timestamps": {
                 "start": {"unix": 1199145600, "humanReadable": "2008"}
             },
@@ -288,7 +288,7 @@
             "name": "Drainage Survey is carried out",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "The existing open ditch network was surveyed",
+            "description": "The existing open ditch network was surveyed.",
              "timestamps": {
                 "start": {"unix": 1217545200, "humanReadable": "August 1st 2008"},
                 "end": {"unix": 1220223600, "humanReadable": "August 31st 2008"}
@@ -299,7 +299,7 @@
             "name": "Topographic Survey is carried out",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "15m gridded GPS ground level survey of proposed platform fields.",
+            "description": "This involved a 15m gridded GPS ground level survey of the proposed platform fields.",
             "timestamps": {
                 "start": {"unix": 1220223600, "humanReadable": "September 1st 2008"},
                 "end": {"unix": 1222815600, "humanReadable": "September 30th 2008"}
@@ -310,7 +310,7 @@
             "name": "Hydrological Designs are carried out",
             "eventType": "design",
             "isHighlight": false,
-            "description": "Identification of how catchments could be hydrologically isolated in terms of surface water taking into consideration groundwater interactions, and recommending flow monitoring stations locations and specifications.",
+            "description": "The design required identification of how catchments could be hydrologically isolated in terms of surface water. This took into consideration groundwater interactions, and recommended flow monitoring stations locations and specifications.",
             "timestamps": {
                 "start": {"unix": 1222815600, "humanReadable": "October 1st 2008"},
                 "end": {"unix": 1225497600, "humanReadable": "October 31st 2008"}
@@ -322,7 +322,7 @@
             "eventType": "consent",
             "timelinePeriod": "construction",
             "isHighlight": true,
-            "highlightText": "A range of surveys are carried out to determine the environmental impact.",
+            "highlightText": "A range of surveys were carried out to determine the environmental impact of the platform.",
             "description": "Flood Defence Consent is received from the UK Environment Agency. This is necessary to obtain Planning Consent",
             "timestamps": {
                 "start": {"unix": 1249081200, "humanReadable": "August 1st 2009"},
@@ -335,7 +335,7 @@
             "name": "Revised flow estimates",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "Updated data to determine the hydrological monitoring design.",
+            "description": "The flow data was updated to accurately determine the hydrological monitoring design.",
             "timestamps": {
                 "start": {"unix": 1250550000, "humanReadable":" August 18th 2009" },
                 "end": {"unix": 1250636400, "humanReadable": "August 18th 2009"}
@@ -346,7 +346,7 @@
             "name": "Badger Survey",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "Describe and evaluate badger status, and identify both impacts and mitigation of the proposed works. Necessary for Planning Consent",
+            "description": "This involved describing and evaluating badger status, and identifying both impacts and mitigation of the proposed works. Necessary for gaining Planning Consent",
             "timestamps": {
                 "start": {"unix": 1251759600, "humanReadable": "September 1st 2009"},
                 "end": {"unix": 1254351600, "humanReadable": "September 30th 2009"}
@@ -357,7 +357,7 @@
             "name": "Habitat and Protected Species Survey",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "An Extended Phase 1 Habitat and Protected Species Survey conducted to identify records relating to bats and other notable species, and to search for field signs of protected species or habitats that could support them. Necessary for Planning Consent",
+            "description": "An Extended Phase 1 Habitat and Protected Species Survey was conducted to identify records relating to bats and other notable species, and to search for field signs of protected species, or habitats that could support them. Necessary for gaining Planning Consent",
             "timestamps": {
                 "start": {"unix": 1254351600, "humanReadable": "October 1st 2009"},
                 "end": {"unix": 1257033600, "humanReadable": "October 31st 2009"}
@@ -368,7 +368,7 @@
             "name": "Tree Species and Condition Survey",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "Tree Species and Condition Survey and Constraints Plan conducted, in relation to Root Protection Areas. Location, species, dimensions, age class, condition and remaining lifespan identified and a Protection Plan and Arboricultural Method Statement produced against inadvertent damage. Necessary for Planning Consent",
+            "description": "A Tree Species and Condition Survey and Constraints Plan was conducted, in relation to Root Protection Areas. Locations, species, dimensions, age class, condition and remaining lifespan was identified, and a Protection Plan and Arboricultural Method Statement produced against inadvertent damage. Necessary for gaining Planning Consent",
             "timestamps": {
                 "start": {"unix": 1254351600, "humanReadable": "October 1st 2009"},
                 "end": {"unix": 1257033600, "humanReadable": "October 31st 2009"}
@@ -376,10 +376,10 @@
         },
         {
             "id": 10,
-            "name": "Environmental Impact Assessment",
+            "name": "An Environmental Impact Assessment",
             "eventType": "survey",
             "isHighlight": false,
-            "description": "Including an archaeological survey and a plan to mitigate the groundworks. Necessary for Planning Consent.",
+            "description": "This required an archaeological survey, and a plan to mitigate the groundworks. Necessary for gaining Planning Consent.",
             "timestamps": {
                 "start": {"unix": 1259625600, "humanReadable": "December 1st 2009"},
                 "end": {"unix": 1262304000, "humanReadable": "December 31st 2009"}
@@ -403,7 +403,7 @@
             "timelinePeriod": "construction",
             "isHighlight": true,
             "highlightText": "Planning consent is given and construction begins",
-            "description": "Planning consent given for construction of the farm platform. The construction begins with the laying of drainage, construction of flumes and fencing of the platform fields",
+            "description": "Planning consent was given for construction of the farm platform. The construction began with the laying of drainage, construction of flumes, and fencing of the platform fields",
             "timestamps": {
                 "start": {"unix": 1267401600, "humanReadable": "March 1st 2010"},
                 "end": {"unix": 1270076400, "humanReadable": "March 31st 2010"}
@@ -412,10 +412,10 @@
         },
         {
             "id": 13,
-            "name": "French Drains and Flumes",
+            "name": "French Drains and Flumes are constructed",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "9.2km of French drains constructed, leading first to confluence pits, then to sampling pits and individually sized open channel flow nozzles (H-flumes) at the catchment outlets.", 
+            "description": "9.2km of French drains were constructed across the farm, primarily along proposed field boundary lines. Theses lead first to confluence pits, then on to sampling pits and individually sized open channel flow nozzles (H-flumes) at the catchment outlets.", 
             "timestamps": {
                 "start": {"unix": 1272668400, "humanReadable": "May 1st 2010"},
                 "end": {"unix": 1288569600, "humanReadable": "October 31st 2010"}
@@ -424,10 +424,10 @@
         },
         {
             "id": 14,
-            "name": "Fencing and tracks",
+            "name": "Fencing and tracks are constructed",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Once the French drains had been laid the fields were fenced to avoid damage or contamination by grazing animals.  **Double-check that the fenced-fields data used excludes these areas**  Add next bit to to 2017??? Called field strips in data portal!: In addition, virtual fence lines were identified using GPS... etc",
+            "description": "Once the French drains had been laid the fields were fenced to avoid damage or contamination by grazing animals.",
             "timestamps": {
                 "start": {"unix": 1277938800, "humanReadable": "July 1st 2010"},
                 "end": {"unix": 1283295600, "humanReadable": "August 31st 2010"}
@@ -435,10 +435,10 @@
         },
         {
             "id": 15,
-            "name": "Mains electricity and fibre-optic infrastructure",
+            "name": "Mains electricity and the fibre-optic infrastructure are laid",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Each flume supplied with mains electric power and a fibre optic cable-based data telemetry system, totalling over 5 km in length.",
+            "description": "Each flume was supplied with mains electric power and a fibre optic cable-based data telemetry system. These services total over 5km in length.",
             "timestamps": {
                 "start": {"unix": 1280617200, "humanReadable": "August 1st 2010"},
                 "end": {"unix": 1293840000, "humanReadable": "December 31st 2010"}
@@ -449,7 +449,7 @@
             "name": "Field events data collection begins",
             "eventType": "data",
             "isHighlight": false,
-            "description": "Collection of field events data begins. The field events include farming activities such as ploughing, fertilising, and forage harvesting (cutting). ",
+            "description": "The collection of field events data begins. Field events include farming activities such as ploughing, fertilising, and forage harvesting (cutting). ",
             "timestamps": {
                 "start": {"unix": 1294185600, "humanReadable": "January 5th 2011"}
             },
@@ -457,10 +457,10 @@
         },
         {
             "id": 17,
-            "name": "Flume cabins",
+            "name": "Flume cabins are constructed",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Something about the flume cabins - there are 15, 1 for each sub-catchment of the farmlets",
+            "description": "15 flume cabins were constructed across the farm, one for each sub-catchment of the three farmlets.",
             "timestamps": {
                 "start": {"unix": 1296518400, "humanReadable": "February 1st 2011"},
                 "end": {"unix": 1301612400, "humanReadable": "March 31st 2011"}
@@ -469,10 +469,10 @@
         },
         {
             "id": 18,
-            "name": "Livestock data collection",
+            "name": "Livestock data collection begins",
             "eventType": "data",
             "isHighlight": false,
-            "description": "Collection of livestock data begins, eg weights, locations. Details?? End?",
+            "description": "The collection of livestock data began, including measurement of animal weights and locations.",
             "timestamps": {
                 "start": {"unix": 1301526000, "humanReadable": "March 21st 2011"}
             },
@@ -480,10 +480,10 @@
         },
         {
             "id": 19,
-            "name": "Data sensors and telemetry equipment",
+            "name": "Data sensors and telemetry equipment installed",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Installation of measuring equipment in the flume cabins. Details??",
+            "description": "Measuring equipment was installed in the flume cabins.",
             "timestamps": {
                 "start": {"unix": 1301612400, "humanReadable": "April 1st 2011"},
                 "end": {"unix": 1320105600, "humanReadable": "October 31st 2011"}
@@ -495,8 +495,8 @@
             "eventType": "land",
             "timelinePeriod": "baseline",
             "isHighlight": true,
-            "highlightText": "The baseline measuring period begins with the platform managed as a single system",
-            "description": "During the baseline measuring period, all farm platform fields are managed as permanent pasture-based livestock systems with no separate treatments for the farmlets.",
+            "highlightText": "The baseline measuring period begins, with the platform managed as a single system",
+            "description": "During the baseline measuring period, all farm platform fields are managed as permanent pasture-based livestock systems with no separate treatments as yet for the farmlets.",
             "timestamps": {
                 "start": {"unix": 1301612400, "humanReadable": "April 1st 2011"},
                 "end": {"unix": 1364770800, "humanReadable": "March 31st 2013"}
@@ -505,10 +505,10 @@
         },
         {
             "id": 21,
-            "name": "Soil moisture data collection",
+            "name": "Soil moisture data collection begins",
             "eventType": "data",
             "isHighlight": false,
-            "description": "Measurements begin from Soil Moisture Stations (SMS), one per catchment (15 in total) and located approximately centrally within fields.",
+            "description": "Measurements began from Soil Moisture Stations (SMS). There is one SMS per catchment (15 in total) and they are located approximately centrally within the fields.",
             "timestamps": {
                 "start": {"unix": 1320019200, "humanReadable": "October 31st 2011"}
             }
@@ -519,8 +519,8 @@
             "eventType": "data",
             "timelinePeriod": "construction",
             "isHighlight": true,
-            "highlightText": "Water flow and properties measurements begin in each of the 15 catchment areas ",
-            "description": "Water flow and water properties measurements begin, using bubble flow meters in each flume. Measurements taken include",
+            "highlightText": "Measurement of water flow and water properties begins in each catchment.",
+            "description": "Water flow and water properties measurements began in each of the farm's 15 catchment areas using bubble flow meters in each flume.",
             "timestamps": {
                 "start": {"unix": 1349046000, "humanReadable": "October 1st 2012"}
             },
@@ -533,7 +533,7 @@
             "timelinePeriod": "farmlet",
             "isHighlight": true,
             "highlightText": "The farm is separated into three farmlet systems",
-            "description": "The baseline data collection period ends and the transition to individual management of three farmlets begins, which will include the removal of one field, Top Burrows, from the farm platform. The green farmlet remains as untreated permanent pasture (unimproved by inorganic fertilisers). The blue farmlet is defined as pasture with increased legume use (for biological nitrogen fixation), and the red as pasture with planned reseeding of innovative grass varieties).",
+            "description": "The baseline data collection period ended and the transition to individual management of three farmlets began. This required the removal of one field, Top Burrows, from the farm platform, to even up the farmlets. The green farmlet remained as untreated permanent pasture (unimproved by inorganic fertilisers). The blue farmlet was defined as pasture with increased legume use (for biological nitrogen fixation), and the red as pasture with planned reseeding of innovative grass varieties).",
             "timestamps": {
                 "start": {"unix": 1364770800, "humanReadable": "April 1st 2013"},
                 "end": {"unix": 1446336000, "humanReadable": "October 31st 2015"}  
@@ -545,7 +545,7 @@
             "name": "Dedicated meteorological intruments installed", 
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Precipitation, air temperature, relative humidity and wind speed and wind direction are measured at 15 minute intervals.  These are co-located next to UK Meteorological Office instruments that have been hosted on site since 1981.",
+            "description": "Precipitation, air temperature, relative humidity and wind speed and wind direction are measured at 15 minute intervals.  These are co-located next to UK Meteorological Office instruments that have been hosted on site since 1981, located in centrally in the platform site in Top Burrows.",
             "timestamps": {
                 "start": {"unix": 1364770800, "humanReadable": "April 1st 2013"},
                 "end": {"unix": 1367362800, "humanReadable": "April 30th 2013"}
@@ -556,7 +556,7 @@
             "name": "Meteorological data collection",
             "eventType": "data",
             "isHighlight": false,
-            "description": "Collection begins of precipitation, air temperature, relative humidity, wind speed and wind direction data, measured at 15 minute intervals, for whole site.",
+            "description": "Collection began of precipitation, air temperature, relative humidity, wind speed and wind direction data, measured at 15 minute intervals, for whole site.",
             "timestamps": {
                 "start": {"unix": 1366930800, "humanReadable": "April 26th 2013"}
             }
@@ -566,7 +566,7 @@
             "name": "Reseeding Red Catchment 2",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Ploughing and reseeding of Catchment 2 (Great Field) with perennial ryegrass",
+            "description": "Ploughing and reseeding of Catchment 2 (Great Field) with perennial ryegrass, was carried out.",
             "timestamps": {
                 "start": {"unix": 1372633200, "humanReadable": "July 1st 2013"},
                 "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}  
@@ -577,7 +577,7 @@
             "name": "Reseeding Red Catchment 15",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Ploughing and reseeding of Catchment 15 (Longlands East) with festulolium",
+            "description": "Ploughing and reseeding of Catchment 15 (Longlands East) with festulolium, was carried out.",
             "timestamps": {
                 "start": {"unix": 1372633200, "humanReadable": "July 1st 2013"},
                 "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}  
@@ -588,7 +588,7 @@
             "name": "Reseeding Blue Catchment 8",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Ploughing and reseeding of Catchment 8 (Higher Wyke Moor, Middle Wyke Moor) with perennial ryegrass and white clover",
+            "description": "Ploughing and reseeding of Catchment 8 (Higher Wyke Moor, Middle Wyke Moor) with perennial ryegrass and white clover was carried out",
             "timestamps": {
                 "start": {"unix": 1372633200, "humanReadable": "July 1st 2013"},
                 "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}  
@@ -599,7 +599,7 @@
             "name": "Reseeding Blue Catchment 14",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Ploughing and reseeding of Catchment 14 (Longlands North) with festulolium and white clover",
+            "description": "Ploughing and reseeding of Catchment 14 (Longlands North) with festulolium and white clover was carried out",
             "timestamps": {
                 "start": {"unix": 1372633200, "humanReadable": "July 1st 2013"},
                 "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}  
@@ -607,10 +607,10 @@
         },
         {
             "id": 30,
-            "name": "Additional French drains ",
+            "name": "Additional French drains laid",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "New drains added to divert the removed Top Burrows field drainage away from Catchment/Flume 4.",
+            "description": "New drains were added to divert the removed Top Burrows field drainage away from Catchment/Flume 4.",
             "timestamps": {
                 "start": {"unix":  	1375311600, "humanReadable": "August 1st 2013"},
                 "end": {"unix": 1377990000, "humanReadable": "August 31st 2013"}
@@ -632,7 +632,7 @@
             "name": "Boundary change to Burrows",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Change to the eastern boundary of Burrows with the now removed Top Burrows. Burrows is consequently slightly reduced in area.",
+            "description": "The eastern boundary of Burrows with the removed Top Burrows field is altered, with Burrows being consequently slightly reduced in area.",
             "timestamps": {
                 "start": {"unix": 1376348400, "humanReadable": "August 13th 2013"},
                 "end": {"unix": 1376434800, "humanReadable": "August 13th 2013"}
@@ -643,7 +643,7 @@
             "name": "Dedicated cattle housing",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Three new cattle buildings constructed at the North Wyke Rowden site during winter 2013/2014, providing dedicated housing, silage clamps and farmyard manure middens for each of the three farmlets",
+            "description": "Three new cattle buildings were constructed at the North Wyke Rowden site during winter 2013/2014, providing dedicated housing, silage clamps and farmyard manure middens for each of the three farmlets",
             "timestamps": {
                 "start": {"unix": 1385856000, "humanReadable": "December 1st 2013"},
                 "end": {"unix": 1393632000, "humanReadable": "February 28th 2014"}
@@ -654,7 +654,7 @@
             "name": "Solar radiation sensor added",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Added to meteorological site",
+            "description": "Solar radiation sensor added to the meteorological site",
             "timestamps": {
                 "start": {"unix": 1398898800, "humanReadable": "May 1st 2014"},
                 "end": {"unix": 1401577200, "humanReadable": "May 31st 2014"}
@@ -690,7 +690,7 @@
             "name": "Soil monitoring station added",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "CEH COSMOS-UK soil monitoring station installed on Catchment 2",
+            "description": "A CEH COSMOS-UK soil monitoring station was installed on Catchment 2",
             "timestamps": {
                 "start": {"unix":  	1412895600, "humanReadable": "October 10th 2014"},
                 "end": {"unix": 1412982000, "humanReadable": "October 10th 2014"}  
@@ -701,7 +701,7 @@
             "name": "Phosphax analysers",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Phosphax analysers measuring both total and ortho-phosphate from here onwards. (***Is this the correct year? Should it be 2016 Check in instrument data - could be error in Appendix B)",
+            "description": "Phosphax analysers measured both total and ortho-phosphate from here onwards.",
             "timestamps": {
                 "start": {"unix": 1423008000, "humanReadable": "February 4th 2015"},
                 "end": {"unix": 1423094400, "humanReadable": "February 4th 2015"}  
@@ -712,7 +712,7 @@
             "name": "Pluvio rain gauge added",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Added to meteorological site (to complement the 15 catchment tipping buckets)",
+            "description": "Added to the central meteorological site to complement the 15 tipping buckets on the farm catchments",
             "timestamps": {
                 "start": {"unix":  	1427842800, "humanReadable": "April 1st 2015"},
                 "end": {"unix": 1430434800, "humanReadable": "April 30th 2015"}  
@@ -723,7 +723,7 @@
             "name": "Soil moisture sensors replaced",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "Adcon A51760 model replaced with A51730 model",
+            "description": "The Adcon A51760 model sensors were replaced with the A51730 model.",
             "timestamps": {
                 "start": {"unix": 1433113200, "humanReadable": "June 1st 2015"},
                 "end": {"unix": 1448928000, "humanReadable": "November 30th 2015"}  
@@ -780,7 +780,7 @@
             "timelinePeriod": "farmlet",
             "isHighlight": true,
             "highlightText": "Orchard Dean is split into two fields",
-            "description": "Orchard Dean is split into two fields: Orchard Dean North and Orchard Dean South (Green farmlet, Catchment 5). This creates an even seven fields per farmlet, to facilitate comparisons across systems when triplet management (cattle grazing, sheep grazing and cutting) comes into operation in 2016",
+            "description": "Orchard Dean is split into two fields: Orchard Dean North, and Orchard Dean South (both part of the Green farmlet, Catchment 5). This achieved an even seven fields per farmlet, to facilitate comparisons across systems when triplet management (cattle grazing, sheep grazing and cutting) came into operation in 2016",
             "timestamps": {
                 "start": {"unix": 1439420400, "humanReadable": "August 13th 2015"},
                 "end": {"unix": 1439506800, "humanReadable": "August 13th 2015"}  
@@ -792,7 +792,7 @@
             "name": "Pressure transducers installed",
             "eventType": "construction",
             "isHighlight": false,
-            "description": "To replace bubbler flow meters",
+            "description": "These replaced bubble flow meters in the catchments.",
             "timestamps": {
                 "start": {"unix": 1441580400, "humanReadable": "September 7th 2015"},
                 "end": {"unix": 1442271600, "humanReadable": "September 14th 2015"}  
@@ -814,10 +814,10 @@
         },
         {
             "id": 48,
-            "name": "Equipment is upgraded",
+            "name": "More equipment is replaced and upgraded",
             "eventType": "data",
             "isHighlight": false,
-            "description": "Upgrade of YSI 6600V2 multi-parameter sonde to YSI Exo.***Explain!!! Turbidity units changed from NTU to FNU. New loggers installed. Everything up and running by 29/10/16. Flume loggers were changed from Adcon A723 to OTT netDL for data transfer via the fibre optic network.",
+            "description": "YSI 6600V2 multi-parameter sonde upgaded to YSI Exo.Turbidity units changed from NTU to FNU. New loggers installed, with all this replacement equipment operative by the end of October. Flume loggers were changed from Adcon A723 to OTT netDL for data transfer via the fibre optic network.",
             "timestamps": {
                 "start": {"unix": 1462057200, "humanReadable": "May 1st 2016"},
                 "end": {"unix": 1475276400, "humanReadable": "September 30th 2016"}  
@@ -830,7 +830,7 @@
             "timelinePeriod": "farmlet",
             "isHighlight": true,
             "highlightText": "Virtual fence lines are identified to allow fields to be split",
-            "description": "Several virtual fence lines per field identified by GPS, allowing fields to be temporarily split into (typically two) sections using movable fences, to facilitate management of areas used for grazing and silage production (identified as 'field strips' in the Data Portal).",
+            "description": "Several virtual fence lines per field were identified by GPS, allowing for fields to be temporarily split into (typically two) sections using movable fences. This was to facilitate management of the areas used for grazing and silage production (identified as 'field strips' in the Data Portal).",
             "timestamps": {
                 "start": {"unix": 1483228800, "humanReadable": "January 1st 2017"}
             },
@@ -841,7 +841,7 @@
             "name": "Phosphax instrumentation added to Catchment 3",
             "eventType": "data",
             "isHighlight": false,
-            "description": "Phosphax (phosphorus analyser) installed in Catchment 3 flume (red farmlet), in addition to those in Catchments 5 (green farmlet), 8 (blue farmlet and 2 (red farmlet) ",
+            "description": "Phosphax instrumentation (phosphorus analyser) installed in Catchment 3 flume (red farmlet), in addition to those in Catchments 5 (green farmlet), 8 (blue farmlet and 2 (red farmlet) ",
             "timestamps": {
                 "start": {"unix": 1509494400, "humanReadable": "November 1st 2017"},
                 "end": {"unix": 1512086400, "humanReadable": "November 30th 2017"}  
@@ -849,11 +849,11 @@
         },
         {
             "id": 51,
-            "name": "Blue Catchment 14 oversown",
+            "name": "Blue Catchment 14 is oversown",
             "eventType": "land",
             "timelinePeriod": "farmlet",
             "isHighlight": true,
-            "description": "Catchment 14 (Longlands North) is oversown with a white clover mixture",
+            "description": "Catchment 14 (Longlands North) was oversown with a white clover mixture",
             "timestamps": {
                 "start": {"unix": 1525820400, "humanReadable": "May 9th 2018"},
                 "end": {"unix": 1525906800, "humanReadable": "May 9th 2018"}  
@@ -862,7 +862,7 @@
         },
         {
             "id": 52,
-            "name": "Orr Small Ruminant Facility construction",
+            "name": "The Orr Small Ruminant Facility is constructed",
             "eventType": "construction",
             "isHighlight": false,
             "description": "Dedicated sheep facility, separated into farmlets (not previously possible) for winter housing, with further separation for subgroups so ewes may have nutritional requirements optimised depending on number of lambs carried. Some pens are suitable for goats. The facility also includes 24 biocontrol units for feed intake studies",
@@ -873,12 +873,12 @@
         },
         {
             "id": 53,
-            "name": "Second system change period",
+            "name": "Second system change period begins",
             "eventType": "land",
             "timelinePeriod": "farmlet",
             "isHighlight": true,
-            "highlightText": "The red system is transitions to arable",
-            "description": "A second period of system changes to the farm platform. The Red farmlet is converted to arable witha planned rotation of winter wheat, winter wheat, oats and beans, the cattle that would have grazed it housed until finishing in a fourth indoor farmlet, the Brown farmlet. Outdoor cattle and sheep production carried out on Green and Blue systems only.",
+            "highlightText": "The red system is transitioned to arable",
+            "description": "This represents a second period of system changes to the farm platform. The Red farmlet is converted to arable with planned rotation of winter wheat, winter wheat, oats and beans. The former red farmlet cattle are housed until finishing in a new fourth indoor farmlet, known as the Brown farmlet. From here on, outdoor cattle and sheep production is carried out solely on the Green and Blue farmlets.",
             "timestamps": {
                 "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"}
             },
@@ -886,10 +886,10 @@
         },
         {
             "id": 54,
-            "name": "Red farmlet transition to arable",
+            "name": "Red farmlet transitions to arable",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Sheep and lambs grazing the red farmlet are removed from the system. Red system cattle are transferred to housing. Existing grass sward of the entire red farmlet is sprayed off, ploughed and sown with winter wheat",
+            "description": "Sheep and lambs grazing the Red farmlet were removed from the system, and the cattle were transferred to housing. The existing grass sward of the entire red farmlet was sprayed off, ploughed and sown with winter wheat",
             "timestamps": {
                 "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"},
                 "end": {"unix": 1572566400, "humanReadable": "October 31st 2019"}  
@@ -897,10 +897,10 @@
         },
         {
             "id": 55,
-            "name": "Introduction of Brown system 4",
+            "name": "Brown system 4 is introduced",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Permanently housed cattle for evaluation of more intensive finishing.",
+            "description": "The Brown farmlet consists of permanently housed cattle for evaluation of more intensive finishing.",
             "timestamps": {
                 "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"},
                 "end": {"unix": 1572566400, "humanReadable": "October 31st 2019"}  
@@ -908,10 +908,10 @@
         },
         {
             "id": 56,
-            "name": "Transition to twin management",
+            "name": "Transition to twin management begins",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Twin system for making comparisons between farmlet enterprise management of Green and Blue farmlets, after Red system transitioned to arable",
+            "description": "The former triplet enterprise management system, transtioned to a twin system for comparisons between the Green and Blue farmlets after the Red system was transitioned to arable",
             "timestamps": {
                 "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"},
                 "end": {"unix": 1572566400, "humanReadable": "October 31st 2019"}  
@@ -919,10 +919,10 @@
         },
         {
             "id": 57,
-            "name": "Catchment 1 fields combined",
+            "name": "Catchment 1 fields are combined",
             "eventType": "land",
             "isHighlight": false,
-            "description": "Catchment 1 fields, Pecketsford and Little Pecketsford are combined into one field, Pecketsford(whole)No changes to overall size or shape",
+            "description": "Catchment 1 fields, Pecketsford and Little Pecketsford were combined into one field, known as Pecketsford(whole).",
             "timestamps": {
                 "start": {"unix": 1564614000, "humanReadable": "August 1st 2019"},
                 "end": {"unix": 1572566400, "humanReadable": "October 31st 2019"}  
@@ -948,7 +948,7 @@
             "eventType": "land",
             "timelinePeriod": "farmlet",
             "isHighlight": true,
-            "description": "Entire red farmlet sown with winter wheat",
+            "description": "Entire red farmlet sown with winter oats",
             "timestamps": {
                 "start": {"unix": 1633042800, "humanReadable": "October 1st 2021"},
                 "end": {"unix": 1635724800, "humanReadable": "October 31st 2021"}  
@@ -961,7 +961,7 @@
             "eventType": "land",
             "timelinePeriod": "farmlet",
             "isHighlight": true,
-            "description": "Entire red farmlet sown with winter wheat, using minimum tillage (no plough).",
+            "description": "Entire red farmlet was sown with winter wheat, but using a minimum tillage (no plough) method.",
             "timestamps": {
                 "start": {"unix": 1664578800, "humanReadable": "October 1st 2022"},
                 "end": {"unix": 1667260800, "humanReadable": "October 31st 2022"}  
