@@ -15,7 +15,7 @@ export const JsonProvider = ( { children } ) => {
     // whether it is still loading (being fetched):
     const [loading, setLoading] = useState(true);
     // any error during the fetch:
-    const [error, setError] = useState(true);
+    const [error, setError] = useState(null);
 
     //this happens once on first render?? I think?:
     useEffect(() => {
